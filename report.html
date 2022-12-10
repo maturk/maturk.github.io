@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+
+    <title>Computer Graphics 2022</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Computer Graphics 2022 Final Project" />
+    <meta property="og:description" content="Hello" />
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💫</text></svg>">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script type = "text/javascript">
+        function showDiv( name) {
+            var x = document.getElementById(name);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    
+    <div class="container" id="main">
+        <div class="row">
+            <br><br><br><br>
+            <h1 class="col-md-12 text-center">
+                <b>Computer Graphics 2022</b> <br>ETH Zurich</br> 
+                <small>
+								Matias Turkulainen
+                </small>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h1>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Introduction
+                </h3>
+                <p class="text-justify">
+                    This website serves as a demo page for my work in the Computer Graphics course at ETH Zurich. 
+                    I extended the minimalistic ray tracer <a href="https://cgl.ethz.ch/teaching/cg22/www-nori/index.html">Nori</a> written in C++ with additional features to render the images shown here. 
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Motivation
+                </h3>
+                <p class="text-justify">
+                    My main motivation for the project was to tackle some of the challenging effects seen in images like the one below. I wanted to simulate volumetric scattering of light in a medium, difficult environmental maps, as well as realistic cameras with the thin lens equation.
+                </p>
+                <br>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <img src="images/motivation.png" alt="Motivational image" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <!--Distortion--> 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h1>
+                    Simple Features
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h3>
+                    Lens distortion
+                </h3>
+                <p class="text-justify"> Lens distortion occurs in image formation with real lenses that deviate from the naive pinhole approximation. Light entering the optical lens off-center is distorted by the curvature of the lens.
+                    Radial distortion refers to the unequal bending of light depending on where light rays hit the lens relative to its optical center. Light further away from the optical center is distorted more.
+                    Radial distortion can be modelled using a polynomial radial distortion model as explained <a href="https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html">here (OpenCV)</a>. Mapping from undistorted pixels is determined by
+                the radial coefficients K1, K2, and K3. Barell distortion occurs with positive coefficients and Pinchusion distortion occurs with negative coefficients. </p>
+                <div class="col-md-4">
+                    <div class="twentytwenty-container">
+                        <img src="images/distortion/distortion_base.png" alt="Mine" class="img-responsive" >
+                        <img src="images/distortion/normal.png" alt="Reference" class="img-responsive%;" >
+                    </div> 
+                </div> 
+                <div class="col-md-4">
+                <div class="twentytwenty-container">
+                    <img src="images/distortion/distortion_base_1.png" alt="Mine" class="img-responsive" >
+                    <img src="images/distortion/barell.png" alt="Reference Barrel Distortion" class="img-responsive%;" >
+                </div> 
+                </div>
+                <div class="col-md-4">
+                    <div class="twentytwenty-container">
+                        <img src="images/distortion/distortion_base_2.png" alt="Mine" class="img-responsive"  >
+                        <img src="images/distortion/pin.png" alt="Reference Pinchusion Distortion" class="img-responsive%;" >
+                </div> 
+                </div>
+
+                <div class="col-md-4">
+                    <pre><xmp > K1 = 0, K2 = 0, K3 = 0</xmp></pre>
+                </div>
+                <div class="col-md-4">
+                    <pre><xmp > K1 = 1, K2 = 1, K3 = 0</xmp></pre>
+                </div>
+                <div class="col-md-4">
+                    <pre><xmp > K1 = -1, K2 = -1, K3 = 0</xmp></pre>
+                </div>
+            </div>
+            <br><br>
+            <div class="col-md-8 col-md-offset-2" >
+                <input type="button" name="answer" value="Code" onclick='showDiv(name = "myDIV")' />
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div id="myDIV"  style="display:none;" class="" > 
+<pre><p> Code implementation of polynomial distortion</p><xmp >
+float K1 = m_K1;
+float K2 = m_K2;
+float K3 = m_K3;
+
+if (K1 != 0 || K2 != 0 || K3 != 0){
+    // Original radius 
+    float r = Vector2f(nearP.x() / nearP.z(), nearP.y() / nearP.z()).norm();
+    // Polynomial Radial distortion
+    nearP.x() *= (1 + K1 * pow(r, 2) + K2 * pow(r,4) + K3 * pow(r, 6));
+    nearP.y() *= (1 + K1 * pow(r, 2) + K2 * pow(r,4) + K3 * pow(r, 6));
+}  
+</xmp></pre>
+</div>
+                    
+            </div>        
+        </div>
+
+        <!--Depth of Field--> 
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Depth of Field
+                </h3>
+                <p class="text-justify">
+                    Depth of field is a light transport phenomena that occurs through thin lenses. The size of the lens aperature and the focal length of the lens has an effect on where light is in focus on the image plane. 
+                    Varying the aperature and the focal length changes what objects are in focus in the image. 
+                </p>
+                <div class="col-md-18">
+                
+                    <div class="twentytwenty-container">
+                        <img src="images/depthOfField/dof_scene_base.png" alt="Reference" class="img-responsive" >
+                        <img src="images/depthOfField/dof_scene_7.png" alt="Mine" class="img-responsive%;" >
+                        <img src="images/depthOfField/dof_scene_6.png" alt="Mine" class="img-responsive%;" >
+                        <img src="images/depthOfField/dof_scene_4.png" alt="Mine" class="img-responsive%;" >
+                    </div> 
+                </div>
+                
+        
+            </div>
+        </div>
+
+        <!--Image textures--> 
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Image Textures
+                </h3>
+                <p class="text-justify">
+                    Texturing meshes in a scene is vital for any modern renderer. One way to texture meshes is to directly use images and to define a function that maps pixel colors to mesh locations. 
+                    The method of image textures map pixel coordinates and associated RGB values in .png/.jpg images to object level uv-coordinates defined for a mesh in a scene.
+                    When a light ray intersects an object in the scene, the intersection point record stores a uv-coordinate value for the mesh intersection. This uv-coordinate is then mapped
+                    to a color value in a RGB image which is given to the shader such that an appropriate color can be rendered. 
+                    Each mesh type in a renderer must define a unique mapping from 3D intersection points to uv-coordinate which can be used for texture mapping. The overall pipeline from light ray intersections to RGB values is illustrated below.
+                        <center>  <pre> f(x,y,z) -> (u,v); T(u,v) -> (R,G,B)</pre></center>
+
+                    In Nori, I implement the image texture mapping fuction T(u,v). 
+                </p> <br> 
+                <div class="col-md-4">
+                    <div class="twentytwenty-container">
+                        <img src="images/textures/earthcloudmap.jpg" alt="Cloudy Earth" class="img-responsive" >
+                    </div> 
+                </div> 
+                <div class="col-md-4">
+                <div class="twentytwenty-container">
+                    <img src="images/textures/earthmap1k.jpg" alt="Earth" class="img-responsive" >
+                </div> 
+                </div>
+                <div class="col-md-4">
+                    <div class="twentytwenty-container">
+                        <img src="images/textures/sunmap.jpg" alt="Sun" class="img-responsive"  >
+                </div> <br>
+                </div>
+                <br>
+                <p class="text-justify">
+                    I use high detail 4K texture maps of planets from the following <a href="http://planetpixelemporium.com/index.php">source</a> for my texture maps. I include the <a href="https://github.com/nothings/stb">stb</a> library for image loading in Nori and I map uv-coordinates to pixel coordinates using the code below. 
+                </p>
+                
+
+            </div>
+
+<br>
+               <!--code--> 
+               <div class="col-md-8 col-md-offset-2" >
+                <input type="button" name="answer" value="Code" onclick='showDiv(name = "myDIV2")'/>
+            </div>
+               <div class="col-md-8 col-md-offset-2">
+                    <div id="myDIV2"  style="display:none;" class="" > 
+                        <pre> 
+<xmp>
+    /*
+    Image Textures
+    by: Matias Turkulainen
+    */
+
+    #include <nori/stb_image.h>
+    #include <nori/texture.h>
+    #include <filesystem/resolver.h>
+    
+    NORI_NAMESPACE_BEGIN
+    
+    class Image_texture : public Texture<Color3f> {
+    public:
+    
+        Image_texture(const PropertyList &props) {
+            m_path= props.getString("image_path", "");
+            filesystem::path image_path = getFileResolver()->resolve(m_path);
+            int width, height, channels;
+            unsigned char *image = stbi_load(image_path.str().c_str(), &width, &height, &channels, 3);
+            if(image == NULL) {
+              printf("Error in loading the image\n");
+              exit(1);
+            }
+    
+            m_image = image;
+            m_width = width;
+            m_height = height;
+            m_channels = channels;
+        }
+    
+        // Map (u,v) to (r,g,b)
+        Color3f eval(const Point2f & uv) {
+            // map (u,v) [0,1] -> image pixels (x,y) [0,width/height]
+    
+            int x = int(uv.x() * m_width) ;
+            int y = int((uv.y()) * m_height) ;
+            
+            float r = m_image[(y*m_width +x) * m_channels +0] /255.0 ;
+            float g = m_image[(y*m_width +x) * m_channels +1] /255.0 ;
+            float b = m_image[(y*m_width +x) * m_channels +2] /255.0;
+            
+            return Color3f(r, g, b);
+        }
+    
+        std::string toString() const {
+            return tfm::format(
+                    "Image_texture[\n"
+                    "  m_name = %s\n"
+                    "]",
+                    m_path // TODO: add rest of params toString
+                );
+        }
+    
+    protected:
+        std::string m_path;
+        unsigned char * m_image;
+        unsigned m_width;
+        unsigned m_height;
+        unsigned m_channels;
+    };
+    
+    NORI_REGISTER_CLASS(Image_texture, "image_texture")
+    NORI_NAMESPACE_END
+</xmp>
+                        </pre>
+                    </div>
+               </div>
+                
+            </div>
+                <!--/code--> 
+            <br>
+            <br>
+            <div class="col-md-8 col-md-offset-2">
+                <div style="position:relative;">
+                    <div class="twentytwenty-container">
+                        <img src="images/textures/planets_2.png" alt="Sun" class="img-responsive" >
+                        <img src="images/textures/jupiter.png" alt="Jupiter" class="img-responsive%;" >
+                        <img src="images/textures/cloud.png" alt="Cloudy Earth" class="img-responsive%;" >
+                        <img src="images/textures/earth.png" alt="Earth" class="img-responsive%;" >
+                    </div> 
+                </div>
+                <br><br>
+            
+            </div>
+        <!--Procedural Textures--> 
+                   <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3>
+                            Procedural Textures
+                        </h3>
+                        <p class="text-justify">
+                            A limitation with texture mapping is the need to store high resolution images which can still become blurry for close-up renders. Procedural textures attempt to combat this by defining
+                            the uv-coordinate to texture mapping with an explicit algorithm. Ideally, this allows for infinite resolution in your texture map, as you can query your procedural texture with the continuous uv-domain [0,1].
+                            Finding a suitable algorithm for a desired texture is the crux of the challenge. Various algorithms exist for tessallation, such as the canonical checkerboard pattern (which I also implemented in Nori), and cellular texturing. 
+                            More advanced mathematical functions, like the mandelbrot set, can also be defined as a procedural texture. 
+                            <br> <br>
+                            Another approach for generating textures algorithmically is to use a random texture generating function. The first random texture generator, referred to as the <i>Image Synthesizer</i> in the Ken Perlin's 1983 SIGGRAPH paper, was the 
+                            <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin</a> noise function. It is a useful tool to naturally texture many objects in a scene without having to explicitly define image texture maps.
+                            Perlin textures have also been used to create virtual <a href="https://we.copernicus.org/articles/22/1/2022/">landscapes</a> (publication date Feb, 2022) with varying parameters, e.g. height of hills or other scene elements.
+                            A notable example is the random scene generation in Minecraft.
+                            <br> <br>
+                            The main idea behind the algorithm is a random function, referred to as a noise function, that maps 2D uv-coordinates to points in multiple random waves of varying amplitude and frequency which are summed together to create a texture output value.
+                            The key insight is that the mapping is made with a pseudo-random number generator which ensures that identical 2D uv-coordinates are mapped to the same output texture of the random function.
+                            This is a seeded random function and changing the seed with a scale attribute generates different random functions and thus output textures. Therefore, by controlling a single scale variable, different uv-coordinate to texture mappings can be easily created.
+                            Further control is given by explicitly defining the amplitude and frequency of the consequtively added waves so that the user can control the overall apperance and distribution of textures generated.
+                            More details regarding the algorithm and the following implementation can be found here: <a href="https://web.archive.org/web/20160530124230/http://freespace.virgin.net/hugo.elias/models/m_perlin.htm">reference</a>. 
+                            For a slightly different treatment of Perlin noise and for a better overview of noise functions in procedural texture generation, refer to <a href="https://www.pbr-book.org/3ed-2018/Texture/Noise#fragment-TextureMethodDefinitions-10">PBR</a>.
+                            <br><br>
+                            My implementation of Perlin noise is controlled by a scale factor, persistence value, number of octaves, as well as an optional scaling factor for RGB colour output as seen in the .xml scene definition snippet below.
+                                <pre><xmp><!-- Sphere -->
+ <mesh type="sphere">
+    <point name="center" value="4.25,2.7,0"/>
+    <float name="radius" value="2"/>
+    <bsdf type="diffuse">
+        <texture type="Procedural_perlin_texture" name="albedo">
+            <integer name= "scale" value = "10"/>
+            <float name= "persistence" value = "0.5"/>
+            <integer name= "octaves" value = "8"/>
+            <vector name = "color_scale" value = "10,1,1"/>
+        </texture>
+    </bsdf>
+</mesh></xmp></pre>
+                            Number of octaves refers to the number of wave functions added together to generate the final texture. The higher the number of octaves, the more high frequency waves are added. 
+                            Each octave, or individual wave, is defined by a frequency and amplitude. The frequency and amplitude are given by the following formula:
+                            <br><br>
+                            <center><pre>frequency = std::pow(2,i); amplitude = std::pow(persistence,i);</pre></center>
+                            Where <i>i</i> is the octave number and <i>persistence</i> is a term that modulates the amplitude at each octave. Higher octaves have higher frequencies but lower amplitudes.
+                            Higher frequencies help in rendering fine details, like boundaries and edges in the generated texture patterns.  
+                            
+                            The scale factor controls the pseudo-random number generator directly. I map uv-coordinates from the [0,1] domain to the interval [0, scale_factor].
+                            These coordinates, modulated by the frequency at each octave, are the input to the noise function which deterministically generates random numbers on the interval [-1,1]. 
+                                <br><br><pre> <xmp>// Noise function
+float Noise(const float x, const float y){
+int n;
+n = x + y * 57;
+n = (n << 13) ^ n;
+float value = (1.0 - ((n * ((n * n * 15731) + 789221) + 1376312589) & 0x7fffffff) / 1073741824.0);
+return (1.0 - ((n * ((n * n * 15731) + 789221) + 1376312589) & 0x7fffffff) / 1073741824.0);
+}</xmp></pre>
+                            
+                            The entire code and further implementation details can be seen below. 
+                            <!--code--> 
+                            <div class="col-md-14" pre>
+                                <input type="button" name="answer" value="Code" onclick='showDiv(name = "myDIV3")'/>
+                            </div>
+                               <div class="col-md-14">
+                                    <div id="myDIV3"  style="display:none;" class="" > 
+                                        <pre> 
+                <xmp>/*
+Procedural Perlin Noise Textures
+by: Matias Turkulainen
+*/
+
+#include <nori/texture.h>
+#include <filesystem/resolver.h>
+
+NORI_NAMESPACE_BEGIN
+
+class Procedural_perlin_texture : public Texture<Color3f> {
+public:
+
+    Procedural_perlin_texture(const PropertyList &props){
+        m_persistence = props.getFloat("persistence", 0.5);
+        m_octaves = props.getInteger("octaves", 8);
+        m_scale = props.getInteger("scale", 10);
+        m_color_scale = props.getVector3("color_scale", Vector3f(1));
+    }
+    
+    Color3f eval(const Point2f & uv) {
+        float total = 0.0;
+        float p = m_persistence;
+        int n = m_octaves - 1;
+
+        int frequency;
+        float amplitude;
+        for (int i = 0; i < n; i++)
+        {
+            frequency = std::pow(2,i);
+            amplitude = std::pow(p,i);
+            total += amplitude * InterpolatedNoise(uv.x() * frequency * m_scale, uv.y() * frequency * m_scale);
+            if (total >= 255){
+                break;
+            }
+        }
+        if (total >=0.0){
+            return Color3f(total *m_color_scale.x(), total *m_color_scale.y(), total *m_color_scale.z());
+        } else {return Color3f(0,0,0);}
+    }
+
+    float Noise(const float x, const float y){
+        // Returns float in interval [-1,1]
+        int n;
+        n = x + y * 57;
+        n = (n << 13) ^ n;
+        float value = (1.0 - ((n * ((n * n * 15731) + 789221) +  1376312589) & 0x7fffffff) / 1073741824.0);
+        return (1.0 - ((n * ((n * n * 15731) + 789221) +  1376312589) & 0x7fffffff) / 1073741824.0);
+    }
+
+    float SmoothedNoise(const float x, const float y){
+        // Gradient smoothing
+        float corners;
+        float sides;
+        float center;
+
+        corners = ( Noise(x-1, y-1)+Noise(x+1, y-1)+Noise(x-1, y+1)+Noise(x+1, y+1) ) / 16;
+        sides   = ( Noise(x-1, y)  +Noise(x+1, y)  +Noise(x, y-1)  +Noise(x, y+1) ) /  8;
+        center  =  Noise(x, y) / 4;
+
+        //std::cout<<"Smoothed noise is: "<<corners + sides + center<<std::endl;
+        return corners + sides + center;
+    }
+
+    float InterpolatedNoise(const float x, const float y){
+        // Grid computation
+        int integer_X    = int(x);
+        float fractional_X = x - integer_X;
+
+        int integer_Y    = int(y);
+        float fractional_Y = y - integer_Y;
+        float v1 = SmoothedNoise(integer_X,     integer_Y);
+        float v2 = SmoothedNoise(integer_X + 1, integer_Y);
+        float v3 = SmoothedNoise(integer_X,     integer_Y + 1);
+        float v4 = SmoothedNoise(integer_X + 1, integer_Y + 1);
+
+        float i1 = Interpolate(v1 , v2 , fractional_X);
+        float i2 = Interpolate(v3 , v4 , fractional_X);
+
+        return Interpolate(i1 , i2 , fractional_Y);
+
+    }
+
+    float Interplate_linar (const float a, const float b, const float x){
+        // Linear interpolation
+        return  a*(1-x) + b*x;
+    }
+
+    float Interpolate(float a, float b, float x){
+        // Cosine interpolation
+        double ft = x * M_PI;
+        double f = (1 - cos(ft)) * 0.5;
+        return  a*(1-f) + b*f;
+    }
+
+
+    std::string toString() const {
+        return tfm::format(
+                "Procedural_perlin_texture[\n"
+                "  m_name = %s\n"
+                "]",
+                m_persistence,
+                m_octaves,
+                m_scale
+                );
+    }
+
+protected:
+    int m_octaves;
+    float m_persistence;
+    int m_scale;
+    Vector3f m_color_scale;
+};
+
+NORI_REGISTER_CLASS(Procedural_perlin_texture, "Procedural_perlin_texture")
+NORI_NAMESPACE_END
+                    
+                </xmp>
+                                        </pre>
+                                    </div>
+                               </div>
+                        </p>
+        
+                        <div class="col-md-6"> 
+                        <div style="position:relative;">
+                            <div class="twentytwenty-container">
+                                <img src="images/textures/perlin/scale10_octaves2_per0.5.png" alt="Octaves 2" class="img-responsive" >
+                                <img src="images/textures/perlin/scale10_octaves16_per0.1.png" alt="Octaves 16 Persistence 0.1" class="img-responsive%;" >
+                                <img src="images/textures/perlin/scale10_octaves4_per0.5.png" alt="Octaves 4" class="img-responsive%;" >
+                                <img src="images/textures/perlin/scale10_octaves8_per0.5.png" alt="Octaves 8" class="img-responsive%;" >
+                                
+                            </div> 
+                        </div>
+                        </div>
+        
+                        <div class="col-md-6">
+                        <div style="position:relative;">
+                            <div class="twentytwenty-container">
+                                <img src="images/textures/perlin/scale100_octaves2_per0.5.png" alt="Octaves 2" class="img-responsive" >
+                                <img src="images/textures/perlin/scale100_octaves16_per0.1.png" alt="Octaves 16 Persistence 0.1" class="img-responsive%;" >
+                                <img src="images/textures/perlin/scale100_octaves4_per0.5.png" alt="Octaves 4" class="img-responsive%;" >
+                                <img src="images/textures/perlin/scale100_octaves8_per0.5.png" alt="Octaves 8" class="img-responsive%;" >
+                            </div> 
+                        </div>
+                        </div>
+        
+                        <div class="col-md-6">
+                            <pre><xmp > Scale = 10, Persistence = 0.5 </xmp></pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre><xmp > Scale = 100, Persistence = 0.5 </xmp></pre>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="twentytwenty-container">
+                                <img src="images/textures/perlin/linear_interpolation.png" alt="Linear interpolation" class="img-responsive" >
+                                <img src="images/textures/perlin/cosine_interpolation.png" alt="Cosine interpolation" class="img-responsive%;" >
+                            </div> 
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <pre><xmp > Linear vs Cosine interpolation, Scale = 50</xmp></pre>
+                        </div>
+                    </div>
+                    
+                </div>
+         
+        
+        <!--Cluster--> 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Rendering on a High Performance Cluster
+                </h3>
+                <p class="text-justify">
+                    Some of the images seen already required over an hour to render on a M1 Macbook. 
+                    To accelerate debugging and high resolution image creation, I attempted to compile Nori on a high performance cluster: <a href="https://scicomp.ethz.ch/wiki/Euler">Euler</a>.
+                    To achieve this, some modifications were required. 
+
+                </p>
+            </div>
+        </div>
+
+        <!-- ADVANCED-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h1>
+                    Advanced Features
+                </h1>
+                <p class="text-justify"> 
+                    ... Whew, almost there ... 
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <br>
+                <h3>
+                    Environmental Map Emitter
+                </h3>
+                <p class="text-justify">
+                    Image based lighting refers to using a textured image as the envrionmental illumination source in a scene. High resolution images are able to capture high dynamic range effects and subtleties that are difficult to mimic with point lights, area emitters, or other light sources in a renderer. 
+                    This approach is, unfortunately, very expensive since importance sampling of direct scene light sources is no longer effective. The <a href="https://www.pbr-book.org/3ed-2018/Light_Transport_I_Surface_Reflection/The_Light_Transport_Equation">light transport equation</a> 
+
+                <div class="row">
+                <div class="col-md-2 col-lg-2 center">
+                
+                </div>
+                <div class="col-md-10 col-lg-8">
+                <div class="displaymath"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="60.759ex" height="5.843ex" style="vertical-align: -2.338ex;" viewBox="0 -1508.9 26160 2515.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+                <title id="MathJax-SVG-1-Title">StartLayout 1st Row 1st Column upper L Subscript normal o Superscript Baseline left-parenthesis normal p Subscript Baseline comma omega Subscript normal o Baseline right-parenthesis 2nd Column equals upper L Subscript normal e Superscript Baseline left-parenthesis normal p Subscript Baseline comma omega Subscript normal o Baseline right-parenthesis plus integral Underscript script upper S squared Endscripts f Subscript Baseline left-parenthesis normal p Subscript Baseline comma omega Subscript normal o Baseline comma omega Subscript normal i Baseline right-parenthesis upper L Subscript normal i Superscript Baseline left-parenthesis normal p Subscript Baseline comma omega Subscript normal i Baseline right-parenthesis StartAbsoluteValue cosine theta Subscript normal i Baseline EndAbsoluteValue normal d omega Subscript normal i Baseline period EndLayout</title>
+                <defs aria-hidden="true">
+                <path stroke-width="1" id="E1-LATINMODERNNORMAL-1D43F" d="M643 247c0 0 0 -3 -4 -14l-79 -216c-6 -17 -7 -17 -31 -17h-463c-18 0 -27 0 -27 11c0 20 10 20 27 20c79 0 81 8 91 47l134 537c3 12 4 15 4 19c0 13 -9 14 -27 16c-17 2 -38 2 -38 2c-19 0 -28 0 -28 11c0 20 12 20 19 20l133 -3l148 3c5 0 16 0 16 -12 c0 -19 -8 -19 -38 -19c-94 0 -97 -11 -106 -47l-135 -540c-5 -18 -5 -20 -5 -23c0 -8 3 -9 13 -10c6 -1 8 -1 22 -1h94c173 0 217 114 251 206c7 16 8 21 17 21s12 -7 12 -11Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-6F" d="M471 214c0 -127 -101 -225 -222 -225c-117 0 -221 96 -221 225c0 125 97 234 222 234c121 0 221 -106 221 -234zM388 222c0 38 0 96 -26 139s-69 65 -113 65c-40 0 -87 -21 -114 -67c-24 -44 -24 -98 -24 -137c0 -36 0 -97 25 -141c27 -46 71 -67 114 -67 c50 0 94 29 116 74c22 44 22 98 22 134Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-28" d="M332 -238c0 -5 -5 -10 -10 -10c-2 0 -4 1 -6 2c-110 83 -215 283 -215 454v84c0 171 105 371 215 454c2 1 4 2 6 2c5 0 10 -5 10 -10c0 -3 -2 -6 -4 -8c-104 -78 -173 -278 -173 -438v-84c0 -160 69 -360 173 -438c2 -2 4 -5 4 -8Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-70" d="M521 216c0 -129 -104 -227 -223 -227c-76 0 -118 54 -123 70v-9v-168c0 -45 11 -45 78 -45v-31l-113 3l-112 -3v31c67 0 78 0 78 45v468c0 44 -7 50 -78 50v31l144 11v-66c20 22 62 66 140 66c112 0 209 -99 209 -226zM438 216c0 113 -61 201 -134 201 c-51 0 -100 -29 -129 -80v-223c0 -20 0 -21 14 -42c27 -41 65 -61 105 -61c74 0 144 84 144 205Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-2C" d="M203 1c0 -117 -80 -194 -91 -194c-5 0 -10 4 -10 11c0 3 0 5 11 16c33 33 68 93 68 167c0 14 -2 15 -2 15s-2 -1 -5 -3c-10 -9 -23 -13 -35 -13c-33 0 -53 26 -53 53c0 28 20 53 53 53c39 0 64 -39 64 -105Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNNORMAL-1D714" d="M604 372c0 -40 -12 -90 -23 -133c-30 -121 -93 -250 -197 -250c-67 0 -102 44 -113 106c-38 -62 -90 -106 -153 -106c-76 0 -105 62 -105 143c0 35 5 74 15 112c16 63 41 127 82 184c5 6 12 9 18 9c3 0 6 0 9 -2c5 -3 9 -8 9 -14c0 -4 -2 -9 -5 -13 c-38 -53 -74 -109 -89 -169c-5 -22 -8 -45 -8 -65c0 -63 26 -113 87 -113c55 0 103 39 136 93c1 29 5 59 13 90c5 22 15 47 34 47c14 0 19 -11 19 -26c0 -8 -2 -17 -4 -26c-7 -30 -17 -60 -30 -88c9 -52 42 -90 98 -90c79 0 137 92 160 183c3 12 4 25 4 37 c0 35 -13 66 -38 88c-7 7 -11 15 -11 25c0 11 5 22 14 32c10 10 23 16 35 16c9 0 17 -3 23 -9c15 -13 20 -35 20 -61Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-29" d="M288 208c0 -171 -105 -371 -215 -454c-2 -1 -4 -2 -6 -2c-5 0 -10 5 -10 10c0 3 2 6 4 8c104 78 173 278 173 438v84c0 160 -69 360 -173 438c-2 2 -4 5 -4 8c0 5 5 10 10 10c2 0 4 -1 6 -2c110 -83 215 -283 215 -454v-84Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-3D" d="M722 347c0 -11 -9 -20 -20 -20h-626c-11 0 -20 9 -20 20s9 20 20 20h626c11 0 20 -9 20 -20zM722 153c0 -11 -9 -20 -20 -20h-626c-11 0 -20 9 -20 20s9 20 20 20h626c11 0 20 -9 20 -20Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-65" d="M415 119c0 -19 -45 -130 -167 -130c-115 0 -220 97 -220 231c0 125 92 228 208 228c125 0 179 -97 179 -196c0 -21 -3 -21 -25 -21h-279c0 -36 0 -102 30 -150c23 -37 63 -67 113 -67c10 0 100 0 135 103c2 8 4 14 13 14c5 0 13 -2 13 -12zM349 252 c0 39 -10 174 -113 174c-34 0 -118 -25 -124 -174h237Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-2B" d="M722 250c0 -11 -9 -20 -20 -20h-293v-293c0 -11 -9 -20 -20 -20s-20 9 -20 20v293h-293c-11 0 -20 9 -20 20s9 20 20 20h293v293c0 11 9 20 20 20s20 -9 20 -20v-293h293c11 0 20 -9 20 -20Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNSIZE1-222B" d="M943 1268c0 -35 -25 -50 -49 -50c-23 0 -48 16 -48 49c0 25 17 47 50 49c-4 4 -29 23 -60 23c-39 0 -73 -129 -85 -178c-34 -129 -71 -329 -108 -542c-54 -321 -119 -640 -196 -956c-71 -290 -128 -524 -280 -524c-61 0 -111 42 -111 93c0 35 25 50 49 50 c23 0 48 -16 48 -49c0 -25 -17 -47 -49 -49c0 0 25 -23 61 -23c81 0 127 188 145 261c33 139 62 306 88 459c110 654 246 1156 249 1167c55 204 111 313 187 313c55 0 109 -39 109 -93Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-53" d="M499 186c0 -110 -80 -208 -197 -208c-89 0 -153 36 -184 70c-33 -53 -36 -57 -36 -57c-7 -11 -8 -13 -15 -13c-11 0 -11 7 -11 24v200c0 18 0 25 13 25c3 0 11 0 12 -10c1 -36 4 -100 62 -154c53 -49 129 -54 158 -54c84 0 134 72 134 143c0 33 -10 66 -31 92 c-28 37 -58 44 -85 51c-70 17 -121 29 -132 33c-78 27 -131 100 -131 183c0 106 84 194 195 194c89 0 130 -41 160 -70l35 57c7 12 8 13 15 13c11 0 11 -7 11 -24v-201c0 -19 0 -24 -13 -24c-11 0 -11 6 -12 12c-6 45 -28 209 -195 209c-78 0 -132 -61 -132 -131 c0 -58 39 -112 101 -127l128 -31c84 -20 150 -102 150 -202Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-32" d="M449 174l-28 -174h-371c0 24 0 26 11 37l192 214c55 62 105 141 105 221c0 82 -43 163 -134 163c-58 0 -112 -37 -135 -102c3 1 5 1 13 1c35 0 53 -26 53 -52c0 -41 -35 -53 -52 -53c-3 0 -53 0 -53 56c0 89 74 181 187 181c122 0 212 -80 212 -194 c0 -100 -60 -154 -216 -292l-106 -103h180c22 0 88 0 95 8c10 15 17 59 22 89h25Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNNORMAL-1D453" d="M552 636c0 -38 -29 -60 -55 -60c-19 0 -37 12 -37 35c0 15 10 50 54 54c-19 18 -45 18 -49 18c-21 0 -38 -15 -47 -34c-6 -12 -20 -83 -24 -104c-11 -58 -10 -56 -21 -114h83c17 0 27 0 27 -11c0 -20 -10 -20 -30 -20h-86l-60 -317c-1 -7 -24 -128 -56 -191 c-18 -38 -58 -97 -113 -97c-41 0 -85 24 -85 69c0 38 29 60 55 60c19 0 37 -12 37 -35c0 -15 -9 -51 -55 -54c19 -18 44 -18 48 -18c52 0 69 91 87 188l75 395h-66c-19 0 -28 0 -28 12c0 19 11 19 30 19h69c24 126 27 136 33 157c30 99 93 117 127 117c41 0 87 -23 87 -69Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-69" d="M247 0c-34 1 -69 3 -104 3l-110 -3v31c67 0 78 0 78 45v269c0 49 -9 55 -74 55v31l140 11v-367c0 -39 4 -44 70 -44v-31zM192 604c0 -25 -20 -53 -54 -53c-30 0 -53 26 -53 53c0 25 20 53 54 53c30 0 53 -26 53 -53Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-7C" d="M159 -230c0 -11 -9 -20 -20 -20s-20 9 -20 20v960c0 11 9 20 20 20s20 -9 20 -20v-960Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-63" d="M415 119c0 -10 -32 -130 -166 -130c-116 0 -215 99 -215 227c0 124 92 232 217 232c77 0 153 -39 153 -107c0 -30 -20 -47 -46 -47c-28 0 -46 20 -46 46c0 13 6 43 47 46c-35 36 -98 37 -107 37c-53 0 -135 -42 -135 -205c0 -161 88 -204 141 -204c37 0 102 12 131 105 c2 6 4 10 13 10c3 0 13 0 13 -10Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-73" d="M360 128c0 -72 -46 -139 -161 -139c-21 0 -66 1 -110 43c-18 -19 -18 -21 -20 -23c-19 -19 -20 -20 -25 -20c-11 0 -11 7 -11 24v132c0 18 0 25 13 25c10 0 11 -4 14 -17c19 -85 55 -142 139 -142c78 0 113 40 113 91c0 72 -82 88 -104 92c-72 14 -100 20 -132 46 c-27 22 -43 50 -43 85c0 56 38 123 160 123c15 0 56 0 94 -28c4 3 14 12 17 16c13 12 15 12 20 12c11 0 11 -7 11 -24v-101c0 -19 0 -24 -13 -24c0 0 -11 0 -12 9c-2 31 -7 121 -117 121c-86 0 -112 -41 -112 -76c0 -58 67 -71 123 -82c42 -8 81 -16 114 -48 c12 -12 42 -42 42 -95Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNNORMAL-1D703" d="M455 500c0 -224 -152 -511 -293 -511c-91 0 -120 111 -120 205c0 229 154 511 293 511c102 0 120 -139 120 -205zM389 562c0 57 -6 121 -55 121c-45 0 -82 -56 -109 -105c-40 -71 -60 -151 -77 -215h209c24 99 32 150 32 199zM348 331h-208c-26 -98 -32 -156 -32 -198 c0 -93 21 -122 54 -122c43 0 81 49 116 117c38 72 59 157 70 203Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-64" d="M527 0l-147 -11v66c-25 -32 -70 -66 -134 -66c-114 0 -212 99 -212 226c0 129 105 227 223 227c54 0 97 -26 126 -62v216c0 49 -8 56 -78 56v31l144 11v-607c0 -49 8 -56 78 -56v-31zM380 118v205c0 18 0 20 -11 37c-31 45 -73 60 -108 60c-54 0 -92 -33 -113 -64 c-29 -45 -31 -105 -31 -142c0 -41 3 -98 29 -139c24 -38 60 -64 105 -64c43 0 88 22 118 70c11 17 11 19 11 37Z"></path>
+                <path stroke-width="1" id="E1-LATINMODERNMAIN-2E" d="M192 53c0 -29 -24 -53 -53 -53s-53 24 -53 53s24 53 53 53s53 -24 53 -53Z"></path>
+                </defs>
+                <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+                <g transform="translate(167,0)">
+                <g transform="translate(-11,0)">
+                <g transform="translate(0,25)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D43F" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="963" y="-213"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-28" x="1135" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-70" x="1524" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2C" x="2081" y="0"></use>
+                <g transform="translate(2526,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="880" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-29" x="3602" y="0"></use>
+                </g>
+                </g>
+                <g transform="translate(4259,0)">
+                <g transform="translate(0,25)">
+                 <use xlink:href="#E1-LATINMODERNMAIN-3D" x="0" y="0"></use>
+                <g transform="translate(1056,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D43F" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-65" x="963" y="-213"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-28" x="1095" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-70" x="1485" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2C" x="2041" y="0"></use>
+                <g transform="translate(2486,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="880" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-29" x="3563" y="0"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2B" x="5231" y="0"></use>
+                <g transform="translate(6232,0)">
+                 <use xlink:href="#E1-LATINMODERNSIZE1-222B" x="0" y="0"></use>
+                <g transform="translate(574,-898)">
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-53" x="0" y="0"></use>
+                 <use transform="scale(0.574)" xlink:href="#E1-LATINMODERNMAIN-32" x="685" y="483"></use>
+                </g>
+                </g>
+                <g transform="translate(7824,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D453" x="0" y="0"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-28" x="8581" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-70" x="8971" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2C" x="9527" y="0"></use>
+                <g transform="translate(9973,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-6F" x="880" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2C" x="11049" y="0"></use>
+                <g transform="translate(11494,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-69" x="880" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-29" x="12414" y="0"></use>
+                <g transform="translate(12970,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D43F" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-69" x="963" y="-213"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-28" x="978" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-70" x="1367" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2C" x="1924" y="0"></use>
+                <g transform="translate(2369,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-69" x="880" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-29" x="3289" y="0"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-7C" x="16815" y="0"></use>
+                <g transform="translate(17094,0)">
+                 <use xlink:href="#E1-LATINMODERNMAIN-63"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-6F" x="444" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-73" x="945" y="0"></use>
+                </g>
+                <g transform="translate(18600,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D703" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-69" x="663" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-7C" x="19366" y="0"></use>
+                 <use xlink:href="#E1-LATINMODERNMAIN-64" x="19811" y="0"></use>
+                <g transform="translate(20368,0)">
+                 <use xlink:href="#E1-LATINMODERNNORMAL-1D714" x="0" y="0"></use>
+                 <use transform="scale(0.707)" xlink:href="#E1-LATINMODERNMAIN-69" x="880" y="-213"></use>
+                </g>
+                 <use xlink:href="#E1-LATINMODERNMAIN-2E" x="21287" y="0"></use>
+                </g>
+                </g>
+                </g>
+                </g>
+                </svg>
+                </div>
+                </div>
+                </div>
+                
+                    must be approximated by Monte Carlo Sampling and a suitable multiple importance sampling technique must be implemented which saves from integrating over the entire sphere for all scene intersection points.
+                    An efficient importance sampling technique proportional to the outgoing illumination on the environment map would help in lowering the variance on the incident radiance term. 
+                </p>
+
+            </div>
+        </div>
+
+        <!--End--> 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>
+                    Acknowledgements
+                </h1>
+                <p class="text-justify">
+                Thanks to all the teachers assistants and people at Disney Studios, Zurich who made this course possible. It was a great learning experience.
+                <br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/bootstrap.min.js"></script>
+<!-- <script src="/js/offcanvas.js"></script> -->
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+
+
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+</body>
+</html>
+

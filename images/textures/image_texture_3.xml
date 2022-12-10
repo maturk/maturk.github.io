@@ -1,0 +1,91 @@
+<scene>
+    <!-- Independent sample generator, user-selected samples per pixel -->
+    <sampler type="independent">
+        <integer name="sampleCount" value="10"/>
+    </sampler>
+    
+    <!-- Use the average visibility integrator -->
+    <integrator type="path_mis"> </integrator> <!-- path_mis or direct -->
+
+    <camera type="perspective">
+        <transform name="toWorld">
+            <lookat target="9, 5.6, 9"
+                    origin="9.5, 6, 10"
+                    up="0, 0.2, 0"/>
+
+        </transform>
+
+        <!-- Field of view: 40 degrees -->
+        <float name="fov" value="43"/>
+        <float name="lensRadius" value="0"/>
+        <float name="focalDistance" value="1"/>
+        <integer name="distortion" value="0"/>
+
+        <!-- 600x400 pixels -->
+        <integer name="width" value="800"/>
+        <integer name="height" value="600"/>
+    </camera>
+
+
+    <!-- Area Emitter -->
+    <mesh type="obj">
+        <string name="filename" value="../base.obj"/>
+        <transform name="toWorld">
+            <scale value="200, 200, 200"/>
+            <rotate angle="270" axis="0 0 1" />
+            <translate value="-1000, 1000, 0"/>
+        </transform>
+
+        <bsdf type="diffuse">
+        </bsdf>
+
+        <emitter type="area">
+            <color name="radiance" value="2, 2, 2"/>
+        </emitter>
+    </mesh>
+
+    <!-- Kettles -->
+     <mesh type="sphere">
+        <point name="center" value="5.0 2.7 0.0" />
+        <float name="radius" value="2.0" />
+        <bsdf type="diffuse">
+            <texture type="image_texture" name="albedo">
+				<string name="image_path" value="jupitermap.jpg"/>
+            </texture>
+        </bsdf>
+        <transform name="toWorld">
+            <scale value="20, 20, 20"/>
+            <rotate angle="180" axis="1 1 0" />
+            <translate value="100,0,0"/>
+        </transform>
+    </mesh>
+
+     <mesh type="sphere">
+        <point name="center" value="5.0 2.7 6.0" />
+        <float name="radius" value="0.2" />
+        <bsdf type="diffuse">
+            <texture type="image_texture" name="albedo">
+				<string name="image_path" value="earthmap1k.jpg"/>
+            </texture>
+        </bsdf>
+        <transform name="toWorld">
+            <scale value="20, 20, 20"/>
+            <rotate angle="90" axis="0 1 0" />
+            <translate value="100,0,0"/>
+        </transform>
+    </mesh>
+
+    <mesh type="sphere">
+        <point name="center" value="5.5 2.7 6.0" />
+        <float name="radius" value="0.05" />
+        <bsdf type="diffuse">
+            <texture type="image_texture" name="albedo">
+				<string name="image_path" value="moonmap1k.jpg"/>
+            </texture>
+        </bsdf>
+
+    </mesh>
+
+
+
+</scene>
