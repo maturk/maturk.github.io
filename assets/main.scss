@@ -1,0 +1,93 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+  .center {
+    border: 0px solid;
+    text-align: right;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .profile-image {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5em;
+    border-radius: 100px;
+    > img {
+        max-width: none !important;
+        width: 100%;
+        transition: width 200ms;
+      }
+    
+      &:hover img {
+        width: 120%;
+      }
+  }
+  
+  .project-list {
+    margin-top: 1.5em;
+  
+    a {
+      text-decoration: none;
+      color: $grey-color-dark;
+    }
+  }
+  
+  .project-links {
+    margin-left: 10px;
+  }
+  
+  .project-cell {
+    background-color: rgba(151, 173, 186, 0.28); //gainsboro;
+    padding: 0;
+    border: 10px solid transparent;
+    border-radius: 20px;
+    background-clip: padding-box;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    //overflow: hidden;
+    
+    > h3 {
+      margin: 0.5em;
+      font-size: 1.4em;
+      color: $grey-color-dark;
+    }
+  }
+  
+  .project-image {
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+  
+    > img {
+      max-width: none !important;
+      width: 90%;
+      transition: width 200ms;
+    }
+  
+    &:hover img {
+      width: 110%;
+    }
+  }
+  
+  .project-content {
+    margin-top: 1em;
+  }

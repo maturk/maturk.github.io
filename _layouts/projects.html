@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<article class="project">
+
+  <h1 class="project-title">{{ page.title | escape }}</h1>
+
+  {%- if page.report -%}
+  <p class="project-links">
+    <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pdf' | relative_url }}"></use></svg>
+    Report: <a href="{{ site.baseurl }}/reports/{{ page.report }}" target="_blank">{{ page.report }}</a>
+  </p>
+  {%- endif -%}
+
+  {%- if page.slides -%}
+  <p class="project-links">
+    <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pdf' | relative_url }}"></use></svg>
+    Slides: <a href="{{ site.baseurl }}/reports/{{ page.slides }}" target="_blank">{{ page.slides }}</a>
+  </p>
+  {%- endif -%}
+
+  {%- if page.github -%}
+  <p class="project-links">
+    <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+    GitHub: <a href="{{ site.github_base }}/{{ page.github }}" target="_blank">{{ page.github }}</a>
+  </p>
+  {%- endif -%}
+
+  {%- if page.show_image -%}
+  <img src="{{ site.baseurl }}/assets/images/{{ page.slug }}/{{ page.image }}" class = "">
+  {%- endif -%}
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {%- if page.show_report -%}
+  <embed src="{{ site.baseurl }}/reports/{{ page.report }}" type="application/pdf" width="100%" height="800em">
+  {%- endif -%}
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
