@@ -40,6 +40,7 @@ collections:
     order:
       - test.md
 
+google_analytics: G-5XWRW1V88P
 
 # Exclude from processing.
 # The following items will not be processed, by default.

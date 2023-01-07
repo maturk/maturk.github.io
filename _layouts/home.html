@@ -48,5 +48,7 @@ layout: default
     {%- endif -%}
     {%- endfor -%}
   </div>
-
+  {% if site.google_analytics %}
+  {% include analytics.html %}
+  {% endif %}
 </div>
