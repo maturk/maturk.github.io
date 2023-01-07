@@ -12,7 +12,7 @@ priority: 300
 
 <div style="margin-top: 2em"></div>
   <div class="row">
-    <p>This page showcases some of my work in modelling dynamic motion with c++ during the course Computational Models of Motion at ETH Zurich.</p>
+    <p>This page showcases some of my work in modelling dynamic motion with C++ during the course Computational Models of Motion at ETH Zurich.</p>
     <div class="row">
       <h3>Walking legged controller</h3>
       <p>Kinematic walking controller for the unitree legged robot. Consists of inverse kinematics for all four legs and joints, analytical and finite difference jacobian definitions, as well as velocity trajectory planning.</p>
