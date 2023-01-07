@@ -34,7 +34,7 @@ layout: default
     {% assign sorted_projects = (site.projects | sort: 'priority') | reverse %}
     {%- for project in sorted_projects -%}
     {% if project.visible != false %}
-    <div class ="column "> 
+    <div class ="project-column "> 
       <a href="{{ project.url | relative_url }}">
         <div class="project-cell"> <!--col-sm-6 project-cell-->
           <h3>{{ project.title | escape }}</h3>
