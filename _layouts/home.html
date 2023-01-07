@@ -34,14 +34,17 @@ layout: default
     {% assign sorted_projects = (site.projects | sort: 'priority') | reverse %}
     {%- for project in sorted_projects -%}
     {% if project.visible != false %}
-    <a href="{{ project.url | relative_url }}">
-      <div class="column"> <!--col-sm-6 project-cell-->
-        <h3>{{ project.title | escape }}</h3>
-        <div class="project-image">
-          <img src="{{ site.baseurl }}/assets/images/{{ project.image }}">
+    <div class ="column "> 
+      <a href="{{ project.url | relative_url }}">
+        <div class="project-cell"> <!--col-sm-6 project-cell-->
+          <h3>{{ project.title | escape }}</h3>
+          <div class="project-image">
+            <img src="{{ site.baseurl }}/assets/images/{{ project.image }}">
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
+    
     {%- endif -%}
     {%- endfor -%}
   </div>
