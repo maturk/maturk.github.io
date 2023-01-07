@@ -2,7 +2,7 @@
 layout: post
 title: Interactive 3D Point Cloud Segmentation with HoloLens 2
 author: Changan Chen, Matias Turkulainen, and Nora Eirich
-image: final_gif_mixed_reality.gif
+image: mixed_reality_demo.gif
 show_image: True
 report: Mixed_Reality_Final_Report.pdf
 github: 
