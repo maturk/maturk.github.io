@@ -692,10 +692,10 @@ table td {
 }
 
 .project-cell {
-  background-color: rgba(194, 201, 205, 0.28);
+  background-color: rgba(227, 205, 205, 0.28);
   padding: 0;
   border: 5px solid transparent;
-  border-radius: 20px;
+  border-radius: 0px;
   background-clip: padding-box;
   height: 340px;
   width: 350px;
@@ -704,8 +704,10 @@ table td {
 }
 .project-cell > h3 {
   margin: 0.2em;
-  font-size: 1.4em;
-  color: #424242;
+  font-size: 1.2em;
+  color: #1756a9;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .project-image {
