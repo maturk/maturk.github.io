@@ -115,13 +115,14 @@ permalink: /resume/
       <hr />
 
       <h3>Portfolio</h3>
-
+      Visit my Personal Portfolio Website: <a href="https://maturk.github.io"> https://maturk.github.io</a>
+      <p>
       <ol>
-        <li><a href="https://maturk.github.io">Personal website with portfolio of projects</a></li>
         <li><a href="https://github.com/maturk">GitHub Profile</a></li>
         <li><a href="https://maturk.github.io/ComputerGraphics/">Computer Graphics Demo</a></li>
         <li><a href="https://maturk.github.io/projects/mixed_reality.html">Mixed Reality Demo</a></li>
       </ol>
+      </p>
 
       <h3 id="footer">Footer</h3>
 
