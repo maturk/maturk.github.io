@@ -702,7 +702,7 @@ table td {
   border: 5px solid transparent;
   border-radius: 20px;
   background-clip: padding-box;
-  height: 300px;
+  height: 350px;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -722,7 +722,8 @@ table td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  height: 240px;
+  margin: 5px;
 }
 .project-image > img {
   max-width: none !important;
