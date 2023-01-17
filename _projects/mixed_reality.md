@@ -35,8 +35,9 @@ priority: 300
     <br><br>
     <h3>Tools Used</h3>
     <ul>
-        <li>C#, Python, and Unity</li>
+        <li>C#, Python, and Unity.</li>
     </ul>
+
    
             
   </div>

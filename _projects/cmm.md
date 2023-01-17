@@ -5,7 +5,7 @@ author: Matias
 image: trotting-in-place.gif
 show_image: false
 report: 
-github: https://maturk.github.io/ComputerGraphics/
+github: 
 show_report: false
 priority: 300
 ---

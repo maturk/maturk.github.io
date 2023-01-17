@@ -702,13 +702,14 @@ table td {
   border: 5px solid transparent;
   border-radius: 20px;
   background-clip: padding-box;
-  height: 340px;
+  height: 300px;
   width: 350px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .project-cell > h3 {
-  margin: 0.2em;
+  margin: 1em;
   font-size: 1.2em;
   color: #1756a9;
   background-color: transparent;
@@ -721,7 +722,7 @@ table td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2px;
+  margin: 10px;
 }
 .project-image > img {
   max-width: none !important;
@@ -733,7 +734,7 @@ table td {
 }
 
 .project-content {
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
