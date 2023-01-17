@@ -698,18 +698,18 @@ table td {
 
 .project-cell {
   background-color: rgba(227, 205, 205, 0.28);
-  padding: 0;
+  padding: 2px;
   border: 5px solid transparent;
   border-radius: 20px;
   background-clip: padding-box;
-  height: 350px;
+  height: 300px;
   width: 350px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .project-cell > h3 {
-  margin: 1em;
+  margin: 0.5em;
   font-size: 1.2em;
   color: #1756a9;
   background-color: transparent;
@@ -721,7 +721,6 @@ table td {
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: 250px;
   justify-content: center;
   margin: 5px;
 }
@@ -731,23 +730,6 @@ table td {
   transition: width 200ms;
 }
 .project-image:hover img {
-  width: 110%;
-}
-
-.image {
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
-}
-.image > img {
-  max-width: none !important;
-  width: 90%;
-  transition: width 200ms;
-}
-.image:hover img {
   width: 110%;
 }
 
