@@ -22,6 +22,8 @@ priority: 300
     <h3>Background</h3>
     <p>3D semantic segmentation is important for various applications in general scene understanding tasks. However, annotating ground truth datasets is a time-consuming and costly process. We propose an auto-labeling tool using the Microsoft HoloLens 2 for interactive egocentric object segmentation. We implement a tool on the HoloLens capable of visualizing point clouds, segmentation results, iterative refinement of segmentations, as well as a 3D mesh visualizer of the final segmentation. 
     <br><br>
+    The backbone of the segmentation model is a neural network architecture based on the Nvidia<a href="https://github.com/NVIDIA/MinkowskiEngine"> Minkowski Engine</a> trained for volumetric segmentation on point clouds on the <a hfref="http://www.scan-net.org">Scannet</a> dataset. User labels, which are gathered by pointing a finger towards objects in the scene, as well as the full point cloud of the scene are the inputs to the network. A binary classification head outputs a segmentation mask for the desired object. 
+    <br><br>
     This interactive first-person semantic segmentation tool significantly improves the time and effort required for labeling tasks in custom environments and enables faster workflows for other research endeavors. Furthermore, it allows for real-time verification and correction of segmentations with minimal user annotation.</p>
     <h3>Results</h3>
     <div class = 'project-image'>
