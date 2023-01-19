@@ -40,7 +40,7 @@ priority: 300
     <p>I trained my network for 4 days with 6 RTX 2080 GPU's on the <a href = "https://scicomp.ethz.ch/wiki/Euler">Euler</a> compute cluster. The dataset consisted of 8 object categories with 50 object instances each and 16 input color/depth views.
     </p>
     <h3>Quantitative</h3>
-    <p> Increasing the number of input views to the network improves reconstruction.<p>
+    <p> I evaluate reconstruction performance with a cross-entropy loss, chamfer distance loss, and intersection over union. I run ablation studies and find that increasing the number of input views to the network improves reconstruction.<p>
     <div class = "row">
       <img src="../assets/images/table_res.png" class="">
     </div>
