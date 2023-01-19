@@ -7,7 +7,7 @@ show_image: True
 report: Mixed_Reality_Final_Report.pdf
 github: 
 show_report: True
-priority: 300
+priority: 2
 ---
 
 <div style="margin-top: 2em"></div>

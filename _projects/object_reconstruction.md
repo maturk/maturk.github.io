@@ -2,12 +2,12 @@
 layout: post
 title: Object Reconstruction
 author: Matias
-image: display_gif_1240.gif
+image: cup_resize.gif
 show_image: false
 report: Coming soon
 github: Coming Soon
 show_report: false
-priority: 300
+priority: 3
 ---
 
 <div style="margin-top: 2em"></div>
@@ -41,10 +41,23 @@ priority: 300
     </div>  
 
     <h2>Results</h2>
-
-    <p>I trained my network for around 4 days with 6 RTX 2080 GPU's on the <a href = "https://scicomp.ethz.ch/wiki/Euler">Euler</a> compute cluster. 9 object categories with 50 object instances each and 16 input color/depth views.
+    <p>I trained my network for 4 days with 6 RTX 2080 GPU's on the <a href = "https://scicomp.ethz.ch/wiki/Euler">Euler</a> compute cluster. The dataset consisted of 8 object categories with 50 object instances each and 16 input color/depth views.
     </p>
-
+    <h3>Quantitative</h3>
+    <p> Increasing the number of input views to the network improves reconstruction.<p>
+    <div class = "row">
+      <img src="../assets/images/table_res.png" class="">
+    </div>
+   <div class="row">
+    <div class = "column">
+      <img src="../assets/images/graph2.png" class="">
+    </div>
+    <div class = "column"> 
+        <img src="../assets/images/graph.png" class="">
+    </div>
+    </div>
+    
+    <h3>Qualitative</h3>
     <div class = 'project-image'>
         <img src="../assets/images/results_pic.png" class="">
     </div>  
@@ -53,15 +66,11 @@ priority: 300
      <div class = 'project-image'>
         <img src="../assets/images/tsne_okay_4.png" class="">
     </div>  
-    <div class = 'project-image'>
-        <img src="../assets/images/results_table.png" class="">
-    </div>  
     <h3>Tools Used</h3>
     <ul>
         <li>Python, Blender, and various bash scripts.</li>
         <li>Main libraries: PyTorch, <a href="https://github.com/facebookresearch/pytorch3d">PyTorch3D</a>, OpenCV, and Open3D.</li>
     </ul>
-  </div>
 
 
 
