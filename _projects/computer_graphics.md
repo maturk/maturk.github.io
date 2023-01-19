@@ -7,7 +7,7 @@ show_image: true
 report: 
 github: https://maturk.github.io/ComputerGraphics/
 show_report: true
-priority: 4
+priority: 400
 redirect:   https://maturk.github.io/ComputerGraphics/
 layout:     redirect
 ---
