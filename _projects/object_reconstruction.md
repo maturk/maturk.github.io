@@ -56,6 +56,7 @@ priority: 300
     <div class="row">
         <div class = "column">
         <div class = "column">
+        <p class>Ground Truth</p>
             <img src="../assets/images/reconstruction/bottle_gt_scan_gif.gif" class="">
             <img src="../assets/images/reconstruction/camera_gt_scan_gif.gif" class="">
             <img src="../assets/images/reconstruction/can_gt_scan_gif.gif" class="">
@@ -64,6 +65,7 @@ priority: 300
             <img src="../assets/images/reconstruction/laptop_gt_scan_gif.gif" class="">
         </div> 
         <div class = "column">
+        <p class>1 Input View Prediction</p>
             <img src="../assets/images/reconstruction/bottle_scan_1_view_gif.gif" class="">
             <img src="../assets/images/reconstruction/camera_scan_1_view_gif.gif" class="">
             <img src="../assets/images/reconstruction/can_scan_1_view_gif.gif" class="">
@@ -74,6 +76,7 @@ priority: 300
         </div>
         <div class = "column">
         <div class = "column"> 
+        <p class>5 Input View Prediction</p>
             <img src="../assets/images/reconstruction/bottle_scan_5_view_gif.gif" class="">
             <img src="../assets/images/reconstruction/camera_scan_5_view_gif.gif" class="">
             <img src="../assets/images/reconstruction/can_scan_5_view_gif.gif" class="">
@@ -81,7 +84,8 @@ priority: 300
             <img src="../assets/images/reconstruction/display_scan_5_view_gif.gif" class="">
             <img src="../assets/images/reconstruction/laptop_scan_5_view_gif.gif" class="">
         </div>
-        <div class = "column"> 
+        <div class = "column">
+        <p class>1-5 Input View Prediction</p> 
             <img src="../assets/images/reconstruction/bottle_gif.gif" class="">
             <img src="../assets/images/reconstruction/camera_gif.gif" class="">
             <img src="../assets/images/reconstruction/can_gif.gif" class="">
