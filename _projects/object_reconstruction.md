@@ -34,7 +34,7 @@ priority: 300
     <h2>Architecture</h2>
     <p> The multi-view auto-encoder consists of a <a href="https://arxiv.org/abs/1612.00593">PointNet</a> like encoder network that fuses embedding vectors from multiple views. The intuition is that regardless of the viewing angle or pose of the input image, each image of the same object should project to the same latent representation. The decoder network is composed of series of linear and 2D convolutional layers that expand the shape embedding vector to a voxel grid of size 128x128x128. I use the cross-entropy loss for shape reconstruction loss and I use a contrastive loss on the embedding vectors to promote clustering in the latent space. </p>
     <div class = 'project-image'>
-        <img src="../assets/images/reconstruction/architecture_diagram_2.png" class="">
+        <img src="../assets/images/reconstruction/architecture_diagram_transparent.png" class="">
     </div>  
     <h2>Results</h2>
     <p>I trained my network for 4 days with 6 RTX 2080 GPU's on the <a href = "https://scicomp.ethz.ch/wiki/Euler">Euler</a> compute cluster. The dataset consisted of 8 object categories with 50 object instances each and 16 input color/depth views.
