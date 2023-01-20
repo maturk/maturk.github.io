@@ -53,12 +53,46 @@ priority: 300
         </div>
     </div>
     <h3>Qualitative</h3>
-    <div class = 'project-image'>
-        <img src="../assets/images/results_pic.png" class="">
-    </div>  
+    <div class="row">
+        <div class = "column">
+        <div class = "column">
+            <img src="../assets/images/reconstruction/bottle_gt_scan_gif.gif" class="">
+            <img src="../assets/images/reconstruction/camera_gt_scan_gif.gif" class="">
+            <img src="../assets/images/reconstruction/can_gt_scan_gif.gif" class="">
+            <img src="../assets/images/reconstruction/cellphone_gt_scan_gif.gif" class="">
+            <img src="../assets/images/reconstruction/display_gt_scan_gif.gif" class="">
+            <img src="../assets/images/reconstruction/laptop_gt_scan_gif.gif" class="">
+        </div> 
+        <div class = "column">
+            <img src="../assets/images/reconstruction/bottle_scan_1_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/camera_scan_1_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/can_scan_1_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/cellphone_scan_1_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/display_scan_1_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/laptop_scan_1_view_gif.gif" class="">
+        </div>
+        </div>
+        <div class = "column">
+        <div class = "column"> 
+            <img src="../assets/images/reconstruction/bottle_scan_5_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/camera_scan_5_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/can_scan_5_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/cellphone_scan_5_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/display_scan_5_view_gif.gif" class="">
+            <img src="../assets/images/reconstruction/laptop_scan_5_view_gif.gif" class="">
+        </div>
+        <div class = "column"> 
+            <img src="../assets/images/reconstruction/bottle_gif.gif" class="">
+            <img src="../assets/images/reconstruction/camera_gif.gif" class="">
+            <img src="../assets/images/reconstruction/can_gif.gif" class="">
+            <img src="../assets/images/reconstruction/cellphone_gif.gif" class="">
+            <img src="../assets/images/reconstruction/display_gif.gif" class="">
+            <img src="../assets/images/reconstruction/laptop_gif.gif" class="">
+        </div>
+    </div>
     <p>The auto-encoder embedding space is clustered into classes as seen in the following TSNE embedding illustration:</p>
      <div class = 'project-image'>
-        <img src="../assets/images/tsne_okay_4.png" class="">
+        <img src="../assets/images/tsne_okay_4.png" max-width='10%'>
     </div>  
     <h3>Tools Used</h3>
     <ul>
