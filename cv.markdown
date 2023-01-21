@@ -23,7 +23,7 @@ permalink: /resume/
 
       <h3 id="profile">Profile</h3>
 
-      <p> MSc student in Robotics at ETH Zurich experienced in Computer Vision, Computer Graphics, and Deep Learning. My main interests lie in 3D scene understanding and topics related to object reconstruction and neural rendering. </p>
+      <p> MSc student in Robotics at ETH Zurich experienced in Computer Vision, Computer Graphics, and Deep Learning. </p>
 
       <hr />
 
@@ -35,9 +35,8 @@ permalink: /resume/
 
         <dd><em>MSc Robotics, Systems and Control</em>
           <strong>2021-2023</strong>
-          Semester Project: Object shape 3D reconstruction and pose estimation from RGB-D images using trained shape and texture priors. Created a custom multi-view
-          object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder of shape priors with PyTorch. I am exploring differential rendering of shape priors with NeRFs. Supervisor Kenneth Blomqvist (Doctorate at D-MAVT, ETH Zurich): <a
-            href="kblomqvist@mavt.ethz.ch">kblomqvist@mavt.ethz.ch</a>. <br> <br>
+          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view
+          object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder of shape priors with PyTorch. <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page.</a><br> <br>
           
           Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
           Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics, 
@@ -94,8 +93,7 @@ permalink: /resume/
         <dd><em>Robotics Systems Lab (RSL), ETH Zurich</em>
           <strong>Feb 2022 - June 2022</strong>
           Implemented inverse kinematics and orienation control for the Dynaarm robot arm (part of the ANYMal quadrupedal robot) with ROS and C++. Setup a motion capture system
-          (Qualisys) with ROS and Linux to track the end effector location in 3D space. Student assistant to Jan Preisig (Scientific Staff): <a
-            href="jan.preisig@mavt.ethz.ch">jan.preisig@mavt.ethz.ch</a>.
+          (Qualisys) with ROS and Linux to track the end effector location in 3D space.
         </dd>
       </dl>
 
