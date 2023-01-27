@@ -5,7 +5,7 @@ author: Matias
 image: cup_resize.gif
 show_image: false
 report: Coming soon
-github: Coming Soon
+github: https://github.com/maturk/ObjectReconstructor
 show_report: false
 priority: 300
 ---
@@ -14,8 +14,8 @@ priority: 300
   <div class="row">
   <div class = "column">
     <p class="project-links">
-        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pdf' | relative_url }}"></use></svg>
-        Code: <a href="{{ site.baseurl }}/assets/reports/{{ page.github }}" target="_blank">{{ page.github }}</a>
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        <a href="{{ page.github }}" target="_blank">GitHub</a>
     </p> 
     </div>
     <div class = "column">
@@ -25,7 +25,6 @@ priority: 300
     </p> 
     </div>
     <p>
-    Work in progress... <br> <br>
     This page showcases my work on 3D Object Reconstruction from images. The main goal is to learn category level object class and shape information from a large dataset of shape models. I trained a 
     auto-encoder neural network architecture on multi-view images of common objects from the ShapeNet dataset.  </p>
     <div class="row">
