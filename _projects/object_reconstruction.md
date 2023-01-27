@@ -21,7 +21,6 @@ priority: 300
     <div class = "column">
     <p class="project-links">
         <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pdf' | relative_url }}"></use></svg>
-        Report: <a href="{{ site.baseurl }}/assets/reports/{{ page.report }}" target="_blank">{{ page.report }}</a>
     </p> 
     </div>
     <p>
