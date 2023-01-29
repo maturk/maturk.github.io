@@ -99,7 +99,7 @@
     margin-top: 2em;
   }
 
-  table {
+  .table {
     display: table;
     border-collapse: inherit;
     tr:nth-child(3) { border: none; }
@@ -113,7 +113,16 @@
     font-style: normal;
     color: -internal-quirk-inherit;
     text-align: start;
-    border-spacing: 20px;
+    border-spacing: 0px;
     border-color: grey;
     font-variant: normal;
+    word-wrap:break-word;
+}
+
+.table tb {
+  word-wrap:normal;
+}
+
+pre {
+  white-space: pre-wrap;
 }

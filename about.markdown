@@ -9,11 +9,13 @@ I am a curious person with a lot of interests. I started my academic career at A
 
 I am quite an ordinary person but I am really motivated to push my limits. Failure is a part of success, and I'll keep trying my best. 
 
-<table>
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
    <tbody><tr>
-     <td>
+     <td style="word-wrap: break-word">
         <h3 align="left"><i>'No Man is an Island'</i></h3>
-<pre style="background: white;">No man is an island entire of itself; 
+<pre style="background: white;word-wrap: break-word">No man is an island entire of itself; 
 every man is a piece of the continent, a part of the main; 
 if a clod be washed away by the sea, Europe 
 is the less, as well as if a promontory were, as 
@@ -29,7 +31,7 @@ the bell tolls; it tolls for thee.
 </pre>
      </td>
   </tr>
-</tbody></table>
+</tbody></thead></table>
 
 
 <img src="../assets/images/bicycle.jpg" class="main-image">
