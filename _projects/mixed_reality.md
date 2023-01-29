@@ -38,11 +38,12 @@ priority: 200
     <h3>Tools Used</h3>
     <ul>
         <li>C#, Python, and Unity.</li>
-        <li>Libraries used: PyTorch for the segmentation model, Python Socket library for TCP client-server connection between an off-board computer and the Hololens.</li>
-    </ul>
-
-   
-            
+        <li>Libraries used: </li>
+        <ul>
+          <li>PyTorch for the segmentation model</li>
+          <li>Python Socket Library for TCP client-server connection between an off-board linux computer and Hololens</li>
+        </ul>
+    </ul>        
   </div>
 
 

@@ -6,10 +6,6 @@ categories: page
 ---
 <link href="{{ site.baseurl }}/assets/css/twentytwenty.css" rel="stylesheet" type="text/css" />
 <br>
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8fNT1C0fW5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</center>
-<br>
 <h3>Write-up</h3>
 On August 31st, 2021 I started my journey to Switzerland to start my graduate degree in Zurich. I started cycling from my parent's home in Espoo, Finland to the Helsinki Cargo Terminal to take the next cargo ship to Germany. The first leg of the journey was only 40km. 
 
@@ -69,6 +65,11 @@ At this point, it was day 13 and I was nearing my limits. I cycled from Lucerne 
     <img src="{{ site.baseurl }}/assets/images/cycling/eth.jpg" alt="ETH Zurich" class="img-responsive%;" >
 </div>
 <br>
+
+<h3>Video</h3>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8fNT1C0fW5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/jquery.twentytwenty.js"></script>
