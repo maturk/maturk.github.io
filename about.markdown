@@ -9,7 +9,7 @@ I am a curious person with a lot of interests. I started my academic career at A
 
 I am quite an ordinary person but I am really motivated to push my limits. Failure is a part of success, and I'll keep trying my best. 
 
-<div class="table-responsive">
+<!--<div class="table-responsive">
 	<table class="table table-hover">
 		<thead>
    <tbody><tr>
@@ -32,8 +32,9 @@ the bell tolls; it tolls for thee.
      </td>
   </tr>
 </tbody></thead></table>
+-->
 
-
-<img src="../assets/images/bicycle.jpg" class="main-image">
-
+<div style="text-align: center;">
+<img src="../assets/images/bicycle.jpg" class ="center" width="60%" height="60%">
+</div>
 [jekyll-organization]: https://github.com/jekyll
