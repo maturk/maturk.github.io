@@ -26,7 +26,7 @@
   }
 
   .profile-image {
-    max-width: 85%;
+    max-width: 55%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2.5em;
@@ -36,7 +36,6 @@
         width: 100%;
         transition: width 200ms;
       }
-    
       &:hover img {
         width: 120%;
       }
@@ -86,12 +85,32 @@
   
     > img {
       max-width: none !important;
+      max-height: 230px;
       width: 90%;
       transition: width 200ms;
     }
   
     &:hover img {
-      width: 110%;
+      width: 95%;
+    }
+  }
+
+  .normal-image {
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+  
+    > img {
+      max-width: none !important;
+      width: 90%;
+      transition: width 200ms;
+    }
+  
+    &:hover img {
+      width: 105%;
     }
   }
 

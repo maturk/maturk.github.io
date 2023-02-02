@@ -2,7 +2,7 @@
 layout: post
 title: Object Reconstruction
 author: Matias
-image: cup_resize.gif
+image: laptop_gt_scan_gif.gif
 show_image: false
 report: Coming soon
 github: https://github.com/maturk/ObjectReconstructor
@@ -24,18 +24,17 @@ priority: 300
     </p> 
     </div>
     <p>
-    This page showcases my work on 3D Object Reconstruction from images. The main goal is to learn category level object class and shape information from a large dataset of shape models. I trained a 
-    auto-encoder neural network architecture on multi-view images of common objects from the ShapeNet dataset.  </p>
+    This page showcases my work on 3D Object Reconstruction from images. The main goal is to learn category level object class and shape information from a large dataset of shape models. I trained a multi-view autoencoder architecture on common objects from the ShapeNet dataset.  </p>
     <div class="row">
     <h2>Multi-View Image Dataset</h2>
-    <p> I used Blender scripts to automatically generate synthetic renders of models from the ShapeNet dataset. I render ground truth color and depth images as well as ground truth camera poses, point cloud, and voxel grid information. Below you can see some example renders. 
+    <p> I used Blender scripts to automatically generate synthetic renders of models from the ShapeNet dataset. I render ground truth color and depth images as well as ground truth camera poses, object masks, point cloud, and voxel grid information. Below you can see some example renders. 
     </p>
-    <div class = 'project-image'>
+    <div class = 'normal-image'>
         <img src="../assets/images/dataset.png" class="">
     </div>  
     <h2>Architecture</h2>
-    <p> The multi-view auto-encoder consists of a <a href="https://arxiv.org/abs/1612.00593">PointNet</a> like encoder network that fuses embedding vectors from multiple views. The intuition is that regardless of the viewing angle or pose of the input image, each image of the same object should project to the same latent representation. The decoder network is composed of series of linear and 2D convolutional layers that expand the shape embedding vector to a voxel grid of size 128x128x128. I use the cross-entropy loss for shape reconstruction loss and I use a contrastive loss on the embedding vectors to promote clustering in the latent space. </p>
-    <div class = 'project-image'>
+    <p> The multi-view autoencoder consists of a <a href="https://arxiv.org/abs/1612.00593">PointNet</a> like encoder network that fuses embedding vectors from multiple views. The intuition is that regardless of the viewing angle or pose of the input image, each image of the same object should project to the same latent representation. The decoder network is composed of series of linear and 2D deconvolutional layers that expand the shape embedding vector to a voxel grid of size 128x128x128. I use the cross-entropy loss for shape reconstruction loss and I use a contrastive loss on the embedding vectors to promote clustering in the latent space. </p>
+    <div class = 'normal-image'>
         <img src="../assets/images/reconstruction/architecture_diagram.png" class="">
     </div>  
     <h2>Results</h2>
@@ -97,7 +96,7 @@ priority: 300
         </div>
     </div>
     <p>The auto-encoder embedding space is clustered into classes as seen in the following TSNE embedding illustration:</p>
-     <div class = 'project-image'>
+     <div class = 'normal-image'>
         <img src="../assets/images/tsne_okay_4.png" max-width='10%'>
     </div>  
     <h3>Tools Used</h3>
