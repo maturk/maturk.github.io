@@ -6,6 +6,9 @@ categories: page
 github: https://github.com/maturk/image-denoising
 ---
 <link href="{{ site.baseurl }}/assets/css/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="/assets/css/styles.css">
 <div style="margin-top: 2em"></div>
   <div class="row">
   <div class = "column">
@@ -19,25 +22,47 @@ github: https://github.com/maturk/image-denoising
         <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pdf' | relative_url }}"></use></svg>
     </p> 
     </div>
-    <p>Image denoising is the process of removing noise from a digital image. Noise in images can occur due to various factors such as low light conditions, high ISO settings, and image compression. There are various methods for denoising an image, including statistical methods, filter-based methods, and deep learning-based methods. Here I explore a few popular methods. Code to all implementations can be found on <a href="https://github.com/maturk/image-denoising">GitHub</a>.</p>
+    <p>Image denoising is the process of removing noise from a digital image. Noise in images can occur due to various factors such as low light conditions, high ISO settings, and image compression. There are various methods for denoising an image, including statistical methods, filter-based methods, and deep learning-based methods. Here I explore a few popular methods. Code to all implementations can be found on <a href="https://github.com/maturk/image-denoising">GitHub</a>. I went ahead and implemented each algorithm from scratch, using no external library.</p>
     <h3> Gaussian kernel method </h3>
-    A Gaussian kernel is a low-pass filter that smoothens the image by blurring out high frequency noise while preserving low frequency details. The Gaussian kernel is defined by a Gaussian kernel that determines the weight of each pixel in the filter window. Pixels near the center of the window contribute more to the smoothing effect, while pixels near the edges contribute less. The size and standard deviation of the Gaussian kernel can be adjusted to balance smoothing and detail preservation. The gaussian kernel is convolved across the input image for all pixel locations. 
+    A Gaussian kernel is a low-pass filter that smoothens the image by blurring out high frequency noise while preserving low frequency details. The Gaussian kernel is defined by a Gaussian kernel that determines the weight of each pixel in the filter window. The size and standard deviation of the Gaussian kernel can be adjusted to balance smoothing and detail preservation.
     <br>
     <br>
-    <div class="twentytwenty-container">
-        <img src="{{ site.baseurl }}/assets/images/denoising/cbox.png" alt="Reference 1 SPP" class="img-responsive%;" >
-        <img src="{{ site.baseurl }}/assets/images/denoising/out_5_1.png" alt="Size: 5 sigma: 1" class="img-responsive%;">
-        <img src="{{ site.baseurl }}/assets/images/denoising/out_5_2.png" alt="Size: 5 sigma: 2" class="img-responsive%;">
-        <img src="{{ site.baseurl }}/assets/images/denoising/out_10_2.png" alt="Size: 10 sigma: 2" class="img-responsive%;">
+    <div class = "row">
+    <div class = "column">
+        <div class="twentytwenty-container">
+            <img src="{{ site.baseurl }}/assets/images/denoising/cbox.png" alt="Reference 1 SPP" class="img-responsive%;" >
+            <img src="{{ site.baseurl }}/assets/images/denoising/gaussian-blur/out_5_1.png" alt="Size: 5 Sigma: 1" class="img-responsive%;">
+        </div>
+    </div>
+     <div class = "column">
+        <div class="twentytwenty-container">
+        <img src="{{ site.baseurl }}/assets/images/denoising/gaussian-blur/out_5_2.png" alt="Size: 5 Sigma: 2" class="img-responsive%;">
+        <img src="{{ site.baseurl }}/assets/images/denoising/gaussian-blur/out_10_2.png" alt="Size: 10 Sigma: 2" class="img-responsive%;">        </div>
+    </div>
+    <div class = "column">
+    <h4>Advantages</h4>
+    <ul>
+        <li>Simple and relatively fast on modern hardware</li>
+    </ul>
+    </div>
+    <div class = "column">
+    <h4>Disadvantages</h4>
+    <ul>
+        <li>Non-edge perserving</li>
+        <li>Does not account for local image statistics</li>
+    </ul>
     </div>
     <br>
     <h3> Bilateral filter </h3>
-    The bilateral filter is a type of non-linear, edge-preserving filter used for image denoising and smoothing. Unlike other filters such as the Gaussian filter that only consider the spatial proximity of pixels, the bilateral filter takes into account both the spatial proximity and the color similarity of pixels. It calculates the weight of each pixel in the filter window based on a Gaussian function of its distance from the center pixel and a Gaussian function of the difference in color intensity between the center pixel and the other pixels. This way, it can preserve the edges and fine details of the image while smoothing out the noise. The standard deviation of the two Gaussian functions can be adjusted to control the strength of the smoothing and the preservation of edges.
-
+    A blast from the past: the Bilateral Filter proposed by C. Tomasi and R. Manduchi in 1998 is a non-linear, edge-preserving filter. The main idea is illustrated below.
+    <img src="{{ site.baseurl }}/assets/images/denoising/bilateral/screenshot_bilateral.png" alt="Size: 10 Sigma: 2" class="img-responsive%;">
+    Unlike other filters such as the Gaussian filter that only consider the spatial proximity of pixels, the bilateral filter takes into account both the spatial proximity and the color similarity of pixels. It calculates the weight of each pixel in the filter window based on a Gaussian function of its distance ( g(.) ) from the center pixel and a Gaussian function of the difference in color intensity ( f(.) ) between the center pixel and the other pixels. 
+    <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2765ae591a57896fe5e802ed797ad87a99a77887" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:58.286ex; height:6.676ex;" alt="{\displaystyle I^{\text{filtered}}(x)={\frac {1}{W_{p}}}\sum _{x_{i}\in \Omega }I(x_{i})f_{r}(\|I(x_{i})-I(x)\|)g_{s}(\|x_{i}-x\|),}" style="display:block; margin-left:auto; margin-right:auto">
+    This way, it can preserve the edges and fine details of the image while smoothing out the noise. The standard deviation of the two Gaussian functions can be adjusted to control the strength of the smoothing and the preservation of edges.
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/jquery.twentytwenty.js"></script>
 <script src="{{ site.baseurl }}/assets/bootstrap.min.js"></script>
-<!-- <script src="/js/offcanvas.js"></script> -->
 <script src="{{ site.baseurl }}/assets/jquery.event.move.js"></script>
 <script>
 $(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
