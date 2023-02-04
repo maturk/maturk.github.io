@@ -24,8 +24,12 @@ github: https://github.com/maturk/image-denoising
     </div>
     <p>Image denoising is the process of removing noise from a digital image. Noise in images can occur due to various factors such as low light conditions, high ISO settings, and image compression. There are various methods for denoising an image, including statistical methods, filter-based methods, and deep learning-based methods. Here I explore a few popular methods. Code to all implementations can be found on <a href="https://github.com/maturk/image-denoising">GitHub</a>. I went ahead and implemented each algorithm from scratch, using no external library.</p>
     <h3> Gaussian kernel method </h3>
-    A Gaussian kernel is a low-pass filter that smoothens the image by blurring out high frequency noise while preserving low frequency details. The Gaussian kernel is defined by a Gaussian kernel that determines the weight of each pixel in the filter window. The size and standard deviation of the Gaussian kernel can be adjusted to balance smoothing and detail preservation.
-    <br>
+    A Gaussian kernel is a low-pass filter that smoothens the image by blurring out high frequency noise while preserving low frequency details. The size and standard deviation of the Gaussian kernel can be adjusted to balance smoothing and detail preservation.
+    <br><br>    
+    <div style="text-align:center;  ">
+        <img src="{{ site.baseurl }}/assets/images/denoising/gaussian-blur/gaussian.png" >
+        <p class = "cen">Gaussian Kernel of Size 10 and Sigma 1 </p>
+    </div>
     <br>
     <div class = "row">
     <div class = "column">
@@ -54,7 +58,7 @@ github: https://github.com/maturk/image-denoising
     </div>
     <br>
     <h3> Bilateral filter </h3>
-    A blast from the past: the Bilateral Filter proposed by C. Tomasi and R. Manduchi in 1998 is a non-linear, edge-preserving filter. The main idea is illustrated below.
+    A blast from the past: the Bilateral Filter proposed by C. Tomasi and R. Manduchi in 1998 is a non-linear, edge-preserving filter. The main idea is illustrated below:
     <img src="{{ site.baseurl }}/assets/images/denoising/bilateral/screenshot_bilateral.png" alt="Size: 10 Sigma: 2" class="img-responsive%;">
     Unlike other filters such as the Gaussian filter that only consider the spatial proximity of pixels, the bilateral filter takes into account both the spatial proximity and the color similarity of pixels. It calculates the weight of each pixel in the filter window based on a Gaussian function of its distance ( g(.) ) from the center pixel and a Gaussian function of the difference in color intensity ( f(.) ) between the center pixel and the other pixels. 
     <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2765ae591a57896fe5e802ed797ad87a99a77887" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:58.286ex; height:6.676ex;" alt="{\displaystyle I^{\text{filtered}}(x)={\frac {1}{W_{p}}}\sum _{x_{i}\in \Omega }I(x_{i})f_{r}(\|I(x_{i})-I(x)\|)g_{s}(\|x_{i}-x\|),}" style="display:block; margin-left:auto; margin-right:auto">
