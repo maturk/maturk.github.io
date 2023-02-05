@@ -63,6 +63,15 @@ github: https://github.com/maturk/image-denoising
     Unlike other filters such as the Gaussian filter that only consider the spatial proximity of pixels, the bilateral filter takes into account both the spatial proximity and the color similarity of pixels. It calculates the weight of each pixel in the filter window based on a Gaussian function of its distance ( g(.) ) from the center pixel and a Gaussian function of the difference in color intensity ( f(.) ) between the center pixel and the other pixels. 
     <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2765ae591a57896fe5e802ed797ad87a99a77887" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:58.286ex; height:6.676ex;" alt="{\displaystyle I^{\text{filtered}}(x)={\frac {1}{W_{p}}}\sum _{x_{i}\in \Omega }I(x_{i})f_{r}(\|I(x_{i})-I(x)\|)g_{s}(\|x_{i}-x\|),}" style="display:block; margin-left:auto; margin-right:auto">
     This way, it can preserve the edges and fine details of the image while smoothing out the noise. The standard deviation of the two Gaussian functions can be adjusted to control the strength of the smoothing and the preservation of edges.
+    <br><br>
+     <div class="twentytwenty-container">
+        <img src="{{ site.baseurl }}/assets/images/denoising/cbox.png" alt="Reference 1 SPP" class="img-responsive%;" >
+        <img src="{{ site.baseurl }}/assets/images/denoising/bilateral/out_5_25_20.png" alt="sigma_color: 25 sigma_space: 20" class="img-responsive%;">  
+        <img src="{{ site.baseurl }}/assets/images/denoising/bilateral/out_5_1_1.png" alt="sigma_color: 1 sigma_space: 1" class="img-responsive%;">
+        <img src="{{ site.baseurl }}/assets/images/denoising/bilateral/out_5_20_20.png" alt="sigma_color: 20 sigma_space: 20" class="img-responsive%;">     
+    </div>
+    <br>
+    Some fine tuning is necessary with this filter. The filter works well on regions with uniform color, low noise, and near boundaries (e.g. top of spheres). However, like shown on the bottom of the spheres, it is unable to deal with very high noisy regions without overly smoothing with the distance gaussian.
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/jquery.twentytwenty.js"></script>

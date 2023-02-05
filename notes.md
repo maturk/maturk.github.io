@@ -8,3 +8,6 @@ Dictionary:
 - dict.setdefault(key, default=None)
 - dict.get(key, default=None)
 - lists cannot be keys, only immutable types can be keys to dictionaries. Could use tuple([]) to make list to tuple immutable.
+
+Bucket sort:
+- 
