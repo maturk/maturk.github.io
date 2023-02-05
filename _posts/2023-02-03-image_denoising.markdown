@@ -22,7 +22,8 @@ github: https://github.com/maturk/image-denoising
         <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#pdf' | relative_url }}"></use></svg>
     </p> 
     </div>
-    <p>Image denoising is the process of removing noise from a digital image. Noise in images can occur due to various factors such as low light conditions, high ISO settings, and image compression. There are various methods for denoising an image, including statistical methods, filter-based methods, and deep learning-based methods. Here I explore a few popular methods. Code to all implementations can be found on <a href="https://github.com/maturk/image-denoising">GitHub</a>. I went ahead and implemented each algorithm from scratch, using no external library.</p>
+    <p>Image denoising is the process of removing noise from a digital image. Noise in images can occur due to various factors such as low light conditions, high ISO settings, and image compression. There are various methods for denoising an image, including statistical methods, filter-based methods, and deep learning-based methods. Here I explore a few popular methods and wrote all implementations from scratch on <a href="https://github.com/maturk/image-denoising">GitHub</a>.
+    </p>
     <h3> Gaussian kernel method </h3>
     A Gaussian kernel is a low-pass filter that smoothens the image by blurring out high frequency noise while preserving low frequency details. The size and standard deviation of the Gaussian kernel can be adjusted to balance smoothing and detail preservation.
     <br><br>    
