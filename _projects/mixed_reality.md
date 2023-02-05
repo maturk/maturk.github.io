@@ -26,7 +26,7 @@ priority: 200
     <br><br>
     This interactive first-person semantic segmentation tool significantly improves the time and effort required for labeling tasks in custom environments and enables faster workflows for other research endeavors. Furthermore, it allows for real-time verification and correction of segmentations with minimal user annotation.</p>
     <h3>Results</h3>
-    <div class = 'project-image'>
+    <div class = 'normal-image'>
         <img src="../assets/images/mixed_reality_results.png" >
       </div>
     <h3>Demo Video</h3>
