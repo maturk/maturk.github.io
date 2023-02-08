@@ -19,5 +19,10 @@ permalink: /notes/
 - ord(): for unicode characters
 - reversing a string: string[::-1]. Creates a copy (more memory).
 
-Bucket sort
-- 
+<b>Generative Modelling Resources </b>
+- Tuomas Kynk&auml;nniemi: Evaluation Metrics of Generative Adversarial Networks
+- Elucidating the Design Space of Diffusion-Based Generative Models
+
+<b>Differential Rendering Papers <b>
+- Extracting Triangular 3D Models, Materials, and Lighting From Images
+- Modular Primitives for High-Performance Differentiable Rendering
