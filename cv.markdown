@@ -36,11 +36,12 @@ permalink: /resume/
         <dd><em>MSc Robotics, Systems and Control</em>
           <strong>2021-2023</strong>
           Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view
-          object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder of shape priors with PyTorch. <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page.</a><br> <br>
+          object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch. <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page.</a><br> <br>
           
           Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
-          Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics, 
-          Machine Perception, Probabilistic Artificial Intelligence, and Seminar in Computer Vision. 
+          Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics,
+          Mixed Reality 5.75/6,
+          Machine Perception, and Seminar in Advanced Topics in Vision 5.75/6. 
         </dd>
 
         <dt>University of Glasgow</dt>
