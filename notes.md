@@ -9,11 +9,15 @@ permalink: /notes/
 - dict.get(key, default=None)
 - lists cannot be keys, only immutable types can be keys to dictionaries. Could use tuple([]) to make list to tuple immutable. 
 
+<b>Sets</b>
+- construct with {} or set()
+- set.add(elem) // adds elem to set
+- Unordered, no indexing. 
 - Sets are mutable, tuples not.
+- use set.update(other_collection) to add to set with other collection type e.g. list []
 
 <b>Strings</b>:
 - Can add new letters to string with s +='let'. No append function like arrays. 
-
 
 <b>Random Functions</b>:
 - ord(): for unicode characters
