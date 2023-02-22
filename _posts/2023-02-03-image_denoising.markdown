@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Image Based Denoising"
+title:  "Image based denoising"
 date:   2023-02-03 02:18:45 +0100
 categories: page
 github: https://github.com/maturk/image-denoising

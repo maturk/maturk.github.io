@@ -29,10 +29,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  maturk
 linkedin_username: Matias-Turkulainen
 
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 collections:
   projects:
@@ -40,6 +42,9 @@ collections:
     order:
       - test.md
 
+minima:
+  date_format: "%b %-d, %Y"
+  
 google_analytics: G-5XWRW1V88P
 
 # Exclude from processing.
