@@ -5,10 +5,6 @@ date:   2023-02-08 02:18:45 +0100
 categories: page
 github: https://github.com/maturk/RayTracer
 ---
-<p class="project-links">
-        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-        <a href="{{ page.github }}" target="_blank">GitHub</a>
-</p> 
 Here I show the progress I make with ray tracing concepts as I slowly implement features in my own path tracer. I'll start from the very basics and build up to more advanced features. 
 <h3>Quick look</h3>
 <center>
