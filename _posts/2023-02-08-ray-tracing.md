@@ -8,7 +8,7 @@ github: https://github.com/maturk/RayTracer
 Here I show the progress I make with ray tracing concepts as I slowly implement features in my own path tracer. I'll start from the very basics and build up to more advanced features. 
 <h3>Quick look</h3>
 <center>
-    <img src="{{ site.baseurl }}/assets/images/raytracing/renderer.jpg" class="img-responsive%" style="width:80%">
+    <img src="{{ site.baseurl }}/assets/images/raytracing/controls.jpg" class="img-responsive%" style="width:80%">
 </center>
 <h3>Basics</h3>
 <b>Intersections and normals</b>
@@ -55,7 +55,7 @@ for (int y = 0; y < image.m_surface.height; y++){
         // trace rays per pixel
         image.m_surface.pixels[(y*image.m_surface.width +x)] = pixel_color;
 ```
-Without multithreading, a 800*450 image takes around 18 seconds to render for an image with a single sample per pixel. Adding multithreading, the render takes only 4 seconds on my 4 core linux machine. Not quite real-time, but I will tackle this problem a bit later... 
+The approximate speedup in rendering will be equal the number of cores your computer supports (multiplied by any hyperthreading for Intel CPUs). The M1 Macbook comes with a 10 core CPU so this gives approximately 10 times the performance increase. However, rendering on complex scenes is not real-time even when parallelising over CPUs. I would have to port the code to the GPU. I will tackle this problem a bit later... 
 <br><br>
 <h3>Making a GUI</h3>
 So far, all the images have been rendered directly into an image file (ppm/png/jpg). Most professional renderers have GUIs so that the user can experiment with various rendering parameters without having to compile the program again. So I set out to use OpenGL, GLFW, GLEW, and ImGUI to make a simple cross-platform GUI application for the renderer.
