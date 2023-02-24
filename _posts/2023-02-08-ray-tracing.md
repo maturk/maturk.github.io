@@ -3,8 +3,12 @@ layout: post
 title:  "Adventures in ray tracing"
 date:   2023-02-08 02:18:45 +0100
 categories: page
-github: https://github.com/maturk/image-denoising
+github: https://github.com/maturk/RayTracer
 ---
+<p class="project-links">
+        <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        <a href="{{ page.github }}" target="_blank">GitHub</a>
+</p> 
 Here I show the progress I make with ray tracing concepts as I slowly implement features in my own path tracer. I'll start from the very basics and build up to more advanced features. 
 <h3>Quick look</h3>
 <center>
@@ -31,7 +35,6 @@ Here I show the progress I make with ray tracing concepts as I slowly implement 
     <img src="{{ site.baseurl }}/assets/images/raytracing/no_gamma.jpg" alt="Diffuse" class="img-responsive%;">
     <img src="{{ site.baseurl }}/assets/images/raytracing/gamma.jpg" alt="Diffuse gamma corrected" class="img-responsive%;" >
 </div>
-<br><br>
 <b>Materials</b>
 <div class="twentytwenty-container">
     <img src="{{ site.baseurl }}/assets/images/raytracing/materials_specular.jpg" alt="Specular metal" class="img-responsive%;">
@@ -40,7 +43,6 @@ Here I show the progress I make with ray tracing concepts as I slowly implement 
 <div class="twentytwenty-container">
     <img src="{{ site.baseurl }}/assets/images/raytracing/hollow_glass_sphere.jpg" alt="Hollow glass" class="img-responsive%;">
 </div>
-<br><br>
 <b>Camera control and lens effects </b><br>
 <div class="twentytwenty-container">
     <img src="{{ site.baseurl }}/assets/images/raytracing/camera.jpg" alt="Camera control" class="img-responsive%;">
