@@ -8,7 +8,7 @@ github: https://github.com/maturk/RayTracer
 Here I show the progress I make with ray tracing concepts as I slowly implement features in my own path tracer. I'll start from the very basics and build up to more advanced features. 
 <h3>Quick look</h3>
 <center>
-    <img src="{{ site.baseurl }}/assets/images/raytracing/renderer.jpg" class="img-responsive%" style="width:70%">
+    <img src="{{ site.baseurl }}/assets/images/raytracing/renderer.jpg" class="img-responsive%" style="width:80%">
 </center>
 <h3>Basics</h3>
 <b>Intersections and normals</b>
