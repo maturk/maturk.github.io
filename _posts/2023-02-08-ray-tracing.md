@@ -6,17 +6,16 @@ categories: page
 github: https://github.com/maturk/image-denoising
 ---
 Here I show the progress I make with ray tracing concepts as I slowly implement features in my own path tracer. I'll start from the very basics and build up to more advanced features. 
-
+<h3>Quick look</h3>
+<center>
+    <img src="{{ site.baseurl }}/assets/images/raytracing/renderer.jpg" class="img-responsive%" style="width:70%">
+</center>
 <h3>Basics</h3>
 <b>Intersections and normals</b>
 <link href="{{ site.baseurl }}/assets/css/twentytwenty.css" rel="stylesheet" type="text/css" />
 <div class="twentytwenty-container">
     <img src="{{ site.baseurl }}/assets/images/raytracing/circle_intersection.jpg" alt="Sphere intersection" class="img-responsive%;" >
     <img src="{{ site.baseurl }}/assets/images/raytracing/normals.jpg" alt="Sphere normals" class="img-responsive%;" >
-</div>
-Surface normal mapping to RGB colors can create cool looking images like the one below.
-<div class="twentytwenty-container">
-    <img src="{{ site.baseurl }}/assets/images/raytracing/fail.jpg" alt="Normal gradient" class="img-responsive%;" >
 </div>
 <b>Multiple object intersections</b>
 <div class="twentytwenty-container">
@@ -38,9 +37,17 @@ Surface normal mapping to RGB colors can create cool looking images like the one
     <img src="{{ site.baseurl }}/assets/images/raytracing/materials_specular.jpg" alt="Specular metal" class="img-responsive%;">
     <img src="{{ site.baseurl }}/assets/images/raytracing/materials_coarse.jpg" alt="Coarse metal" class="img-responsive%;">
 </div>
+<div class="twentytwenty-container">
+    <img src="{{ site.baseurl }}/assets/images/raytracing/hollow_glass_sphere.jpg" alt="Hollow glass" class="img-responsive%;">
+</div>
 <br><br>
+<b>Camera control and lens effects </b><br>
+<div class="twentytwenty-container">
+    <img src="{{ site.baseurl }}/assets/images/raytracing/camera.jpg" alt="Camera control" class="img-responsive%;">
+    <img src="{{ site.baseurl }}/assets/images/raytracing/dof.jpg" alt="Depth of field" class="img-responsive%;">
+</div>
 <b>Parallelising</b><br>
-Raytracing is embarrassingly parallel. OpenMP, as explained by Bisqwit's [Guide to OpenMP](https://bisqwit.iki.fi/story/howto/openmp/), allows for very easy multithreading at runtime. Simply adding the following compiler #pragma before the main rendering loop gives us multitheading performance:
+Raytracing is embarrassingly parallel. OpenMP, as explained by Bisqwit's [Guide to OpenMP](https://bisqwit.iki.fi/story/howto/openmp/), allows for very easy multithreading at runtime. Simply adding the following compiler #pragma before the main rendering loop gives us multithreading performance:
 
 ```
 #pragma omp parallel for ordered schedule(dynamic)
@@ -50,11 +57,11 @@ for (int y = 0; y < image.m_surface.height; y++){
         // trace rays per pixel
         image.m_surface.pixels[(y*image.m_surface.width +x)] = pixel_color;
 ```
-Without multithreading, a 800*450 image takes around 18 seconds to render for a image with a single sample per pixel. Adding multithreading, the render takes only 4 seconds on my 4 core linux machine. Not quite real-time, but I will tackle this problem a bit later... 
+Without multithreading, a 800*450 image takes around 18 seconds to render for an image with a single sample per pixel. Adding multithreading, the render takes only 4 seconds on my 4 core linux machine. Not quite real-time, but I will tackle this problem a bit later... 
 <br><br>
 <h3>Making a GUI</h3>
-So far, all the images have been rendered directly into a image file (ppm/png/jpg). Most professional renderers have GUIs so that the user can experiment with various rendering parameters without having to compile the program again. So I set out to use OpenGL, GLFW, GLEW, and ImGUI to make a simple cross-platform GUI application for the renderer.
-
+So far, all the images have been rendered directly into an image file (ppm/png/jpg). Most professional renderers have GUIs so that the user can experiment with various rendering parameters without having to compile the program again. So I set out to use OpenGL, GLFW, GLEW, and ImGUI to make a simple cross-platform GUI application for the renderer.
+<br><br>
 <b>Displaying a triangle</b> <br>
 Little did I know that displaying a simple triangle would take around 200 lines of <a href="../../../../assets/images/raytracing/code.html">code</a> ...
 <center>
@@ -73,7 +80,11 @@ Whilst the rendering process occurs behind the scenes, the GUI should visualize 
 <center>
     <img src="{{ site.baseurl }}/assets/images/raytracing/sample_per_pixel.gif" class="img-responsive%" style="width:70%">
 </center>
-Work in progress ...
+<b>ImGUI</b> <br>
+Adding buttons to control settings and rendering parameters is easy with ImGUI.
+<center>
+    <img src="{{ site.baseurl }}/assets/images/raytracing/imgui2.jpg" class="img-responsive%" style="width:70%">
+</center>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/jquery.twentytwenty.js"></script>
 <script src="{{ site.baseurl }}/assets/bootstrap.min.js"></script>
