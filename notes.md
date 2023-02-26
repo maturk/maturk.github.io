@@ -32,6 +32,11 @@ permalink: /notes/
 <b>Static</b>
 - static member functions can be called without an instance of a class. 
 
+<b>Vector</b>
+- .at(index).
+- .clear() clears all elements resulting in size 0 vector.
+- .resize(size_t) resizes vector to size. 
+
 <h2>Random</h2>
 - ffplay for preview with ffmpeg
 
@@ -39,6 +44,7 @@ permalink: /notes/
 <b>Generative Modelling Resources </b> 
 - Tuomas Kynk&auml;nniemi: Evaluation Metrics of Generative Adversarial Networks 
 - Elucidating the Design Space of Diffusion-Based Generative Models 
+- https://arxiv.org/pdf/2112.10752.pdf
 - On the Mathematics of Diffusion Models
 
 <b>Differential Rendering Papers </b>
