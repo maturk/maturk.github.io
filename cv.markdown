@@ -59,6 +59,11 @@ permalink: /resume/
       <h3 id="experience">Experience</h3>
 
       <dl>
+        <dt>Research Intern</dt>
+        <dd><em>VTT Technical Research Centre of Finland</em>
+          <strong>April 2023 - Present</strong>
+          Project related to fusing RGB + hyperspectral imaging into hyperspectral radiance fields and material classification in 3D. Contributing and maintaining open-source <a href="https://docs.nerf.studio">NerfStudio</a> project related to NeRF research on GitHub.
+        </dd>
         <dt>Research Assistant</dt>
         <dd><em>Computer Vision and Learning Group (VLG), ETH Zurich</em>
           <strong>Feb 2022 - July 2022</strong>
