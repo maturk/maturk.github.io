@@ -7,7 +7,6 @@ permalink: /resume/
 ---
 
 <body class="">
-
   <div class="container">
     <div class="resume">
       <h1>Matias Turkulainen</h1>
@@ -23,7 +22,7 @@ permalink: /resume/
 
       <h3 id="profile">Profile</h3>
 
-      <p> MSc student in Robotics at ETH Zurich experienced in Computer Vision, Computer Graphics, and Deep Learning. </p>
+      <p> MSc student in Robotics at ETH Zurich interested in Computer Vision and Computer Graphics. </p>
 
       <hr />
 
@@ -35,8 +34,7 @@ permalink: /resume/
 
         <dd><em>MSc Robotics, Systems and Control</em>
           <strong>2021-2023</strong>
-          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view
-          object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch. <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page.</a><br> <br>
+          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch: <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page</a><br><br>
           
           Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
           Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics,
@@ -49,12 +47,11 @@ permalink: /resume/
 
         <dd><em>BEng (Hons) in Mechanical Engineering with Aeronautics</em>
           <strong>2017-2021</strong>
-          Grade: 1st class honours. Cumulative GPA: 20.5/22. Bachelor’s project: “Comparison of SLAM Algorithms for
-          Drone Operations” using ROS + Gazebo simulations.
+          Grade: 1st class honours. Cumulative GPA: 20.5/22. Bachelor’s project: “Comparison of SLAM Algorithms for Drone Operations” using ROS + Gazebo simulations.
         </dd>
       </dl>
 
-      <hr />
+      <hr/>
 
       <h3 id="experience">Experience</h3>
 
@@ -62,7 +59,7 @@ permalink: /resume/
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
           <strong>April 2023 - Present</strong>
-          Project related to fusing RGB + hyperspectral imaging into hyperspectral radiance fields and material classification in 3D. Contributing and maintaining open-source <a href="https://docs.nerf.studio">NerfStudio</a> project related to NeRF research on GitHub.
+          Working on inverse rendering. Project related to fusing RGB + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project related to NeRF research on GitHub.
         </dd>
         <dt>Research Assistant</dt>
         <dd><em>Computer Vision and Learning Group (VLG), ETH Zurich</em>
@@ -76,8 +73,7 @@ permalink: /resume/
         <dd><em>Armstrong Systems</em>
           <strong>April 2022</strong>
           Contract job for creating a computer vision pipeline that extracts user written content on financial documents
-          (Word documents with user fill in) into electronic form. The customer was a financial consultancy based in
-          Zurich. Used Google Tesseract for character recognition and OpenCV to create a pipeline that converted
+          (Word documents with user fill in) into electronic form. Used Google Tesseract for character recognition and OpenCV to create a pipeline that converted
           user input into a database.
         </dd>
 
@@ -108,30 +104,28 @@ permalink: /resume/
       <h3 id="technical">Skills</h3>
 
       <ol>
+        <li>Python</li>
+        <li>C++</li>
+        <li>CUDA</li>
         <li>Linux</li>
-        <li>Python & C++</li>
         <li>Blender</li>
-        <li>Matlab</li>
-        <li>ROS</li>
         <li>Packages: PyTorch, OpenCV, Open3D</li>
       </ol>
 
       <hr />
 
-      <h3>Portfolio</h3>
-      Visit my Personal Portfolio Website: <a href="https://maturk.github.io"> https://maturk.github.io</a>
+      <h3>Links</h3>
+      Website: <a href="https://maturk.github.io"> https://maturk.github.io</a>
       <p>
       <ol>
-        <li><a href="https://github.com/maturk">GitHub Profile</a></li>
-        <li><a href="https://maturk.github.io/ComputerGraphics/">Computer Graphics Demo</a></li>
-        <li><a href="https://maturk.github.io/projects/mixed_reality.html">Mixed Reality Demo</a></li>
+        <li><a href="https://github.com/maturk">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/matias-turkulainen/">LinkedIn</a></li>
       </ol>
       </p>
 
       <h3 id="footer">Footer</h3>
 
-      <p>Matias Turkulainen &#8212; <a href="matiasturkulainen@gmail.com">matiasturkulainen@gmail.com</a> &#8212; (+358)
-        40-7772948</p>
+      <p></p>
 
       <hr />
 
