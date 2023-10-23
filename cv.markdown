@@ -14,8 +14,8 @@ permalink: /resume/
       <h2>MSc Robotics, Systems and Control</h2>
 
       <blockquote>
-        <p><a href="matiasturkulainen@gmail.com">matiasturkulainen@gmail.com</a><br />
-          (+358) 40-7772948</p>
+        <p><a href="matiasturkulainen@gmail.com">matiasturkulainen@gmail.com</a><br/>
+        </p>
       </blockquote>
 
       <hr />
@@ -33,8 +33,8 @@ permalink: /resume/
         <dd><strong>Zurich, Switzerland</strong></dd>
 
         <dd><em>MSc Robotics, Systems and Control</em>
-          <strong>2021-2023</strong>
-          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view object centric RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch: <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page</a><br><br>
+          <strong>2021-2024</strong>
+          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view object RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch: <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page</a><br><br>
           
           Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
           Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics,
@@ -53,13 +53,13 @@ permalink: /resume/
 
       <hr/>
 
-      <h3 id="experience">Experience</h3>
+      <h3 id="employment">Employment</h3>
 
       <dl>
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
-          <strong>April 2023 - Present</strong>
-          Working on inverse rendering. Project related to fusing RGB + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project related to NeRF research on GitHub.
+          <strong>April 2023 - October 2023</strong>
+          Working on neural inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D (under IPR). This work led to contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project related to NeRF research. Also worked on camera pose optimization with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and the problem of registering poses of rgb and hyperspectral images.
         </dd>
         <dt>Research Assistant</dt>
         <dd><em>Computer Vision and Learning Group (VLG), ETH Zurich</em>
@@ -68,34 +68,25 @@ permalink: /resume/
           2D/3D keypoints with Python. The work led to a publication: <a href="https://sanweiliti.github.io/egobody/egobody.html">EgoBody</a>. Guided by doctoral student Siwei Zhang (Doctorate at D-INFK, ETH Zurich): <a
             href="siwei.zhang@inf.ethz.ch">siwei.zhang@inf.ethz.ch</a>.
         </dd>
-
-        <dt>Computer Vision Contract Job</dt>
-        <dd><em>Armstrong Systems</em>
-          <strong>April 2022</strong>
-          Contract job for creating a computer vision pipeline that extracts user written content on financial documents
-          (Word documents with user fill in) into electronic form. Used Google Tesseract for character recognition and OpenCV to create a pipeline that converted
-          user input into a database.
-        </dd>
-
         <dt>Drone Systems Trainee</dt>
         <dd><em>Nokia</em>
           <strong>Jun 2020 - Aug 2021</strong>
           R&D intern at Nokia working with LTE connected drones. System level testing and analysis of experimental hardware/software. Worked on camera based precision landing with Jetson Nano and OpenCV. 
-          Learned IP networking, Linux OS, Bash scripting, and Docker/Kubernetes. Thorough exposure to UAS
-          flight stacks (PX4, Pixhawk, MAVLink).
         </dd>
       </dl>
 
       <hr />
 
-      <h3 id="volunteer">Volunteer</h3>
+      <h3 id="Open-source projects">Open-source projects</h3>
 
       <dl>
-        <dt>Student Assistant</dt>
-        <dd><em>Robotics Systems Lab (RSL), ETH Zurich</em>
-          <strong>Feb 2022 - June 2022</strong>
-          Implemented inverse kinematics and orienation control for the Dynaarm robot arm (part of the ANYMal quadrupedal robot) with ROS and C++. Setup a motion capture system
-          (Qualisys) with ROS and Linux to track the end effector location in 3D space.
+        <dt>gsplat</dt>
+        <dd><em><a href="https://docs.gsplat.studio">https://docs.gsplat.studio</a></em>
+          Together with researchers and students at Berkeley BAIR lab, we modularized and reimplemented the influential "3D Gaussian Splatting for Real-Time Radiance Field Rendering" paper from SIGGRAPH 2023. gsplat contains Python bindings for various lower level CUDA kernels allowing easier experimentation and research in conventional Python based workflows.
+        </dd>
+        <dt>Nerfstudio</dt>
+        <dd><em><a href="https://docs.nerf.studio">https://docs.nerf.studio</a></em>
+          Maintainer and contributor to the open-source NERF project which is trying to bring the latest tech in 3D neural reconstruction to devs and other users. My work includes bug fixes, help with issues and questions, and some major overhauls like this <a href="https://github.com/nerfstudio-project/nerfstudio/pull/2092">PR</a>. I also worked on camera optimization with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and created a <a href="https://github.com/nerfstudio-project/nerfstudio-method-template">template</a> for other devs to expand on.
         </dd>
       </dl>
 
