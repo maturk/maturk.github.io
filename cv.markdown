@@ -34,7 +34,7 @@ permalink: /resume/
 
         <dd><em>MSc Robotics, Systems and Control</em>
           <strong>2021-2024</strong>
-          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view object RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch: <a href="https://maturk.github.io/projects/object_reconstruction.html">Demo Page</a><br><br>
+          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view object RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch. A small <a href="https://maturk.github.io/projects/object_reconstruction.html">demo</a> is available.<br><br>
           
           Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
           Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics,
@@ -58,15 +58,13 @@ permalink: /resume/
       <dl>
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
-          <strong>April 2023 - October 2023</strong>
-          Working on neural inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D (under IPR). This work led to contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project related to NeRF research. Also worked on camera pose optimization with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and the problem of registering poses of rgb and hyperspectral images.
+          <strong>April 2023 - </strong>
+          Working on neural inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project. Also worked on camera pose refinement with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and the various problems of registering poses of rgb and hyperspectral images.
         </dd>
         <dt>Research Assistant</dt>
         <dd><em>Computer Vision and Learning Group (VLG), ETH Zurich</em>
           <strong>Feb 2022 - July 2022</strong>
-          Project related to human pose estimation from images. Data set capture of social interactions using Microsoft Hololens and data processing of OpenPose and AMASS
-          2D/3D keypoints with Python. The work led to a publication: <a href="https://sanweiliti.github.io/egobody/egobody.html">EgoBody</a>. Guided by doctoral student Siwei Zhang (Doctorate at D-INFK, ETH Zurich): <a
-            href="siwei.zhang@inf.ethz.ch">siwei.zhang@inf.ethz.ch</a>.
+          Project related to human pose estimation from images. Data set capture of social interactions using Microsoft Hololens and data processing of OpenPose and AMASS 2D/3D keypoints with Python. The work led to a publication: <a href="https://sanweiliti.github.io/egobody/egobody.html">EgoBody</a>.
         </dd>
         <dt>Drone Systems Trainee</dt>
         <dd><em>Nokia</em>
