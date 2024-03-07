@@ -59,7 +59,7 @@ permalink: /resume/
         <dt>Research Assistant</dt>
         <dd><em>Aalto University</em>
           <strong>Dec 2023 - </strong>
-          Project related to 3D Gaussian splatting. Contributed to <a href="https://github.com/nerfstudio-project/gsplat">gsplat</a> and worked on two projects related to surface reconstruction and deblurring 3DGS. 
+          Project related to 3D Gaussian splatting. Contributed to <a href="https://github.com/nerfstudio-project/gsplat">gsplat</a>. 
         </dd>
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
