@@ -59,11 +59,11 @@ permalink: /resume/
         <dt>Research Assistant</dt>
         <dd><em>Aalto University</em>
           <strong>Dec 2023 - </strong>
-          Project related to 3D Gaussian splatting. Contributed to <a href="https://github.com/nerfstudio-project/gsplat">gsplat</a>. 
+          Project related to 3D Gaussian splatting. Contributed to <a href="https://github.com/nerfstudio-project/gsplat">gsplat</a> and worked on two projects related to surface reconstruction and deblurring 3DGS. 
         </dd>
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
-          <strong>April 2023 - Feb 2023 </strong>
+          <strong>April 2023 - Nov 2023 </strong>
           Working on inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project. Also worked on camera pose refinement with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and the various problems of registering poses of rgb and hyperspectral images.
         </dd>
         <dt>Research Assistant</dt>
