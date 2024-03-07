@@ -22,7 +22,7 @@ permalink: /resume/
 
       <h3 id="profile">Profile</h3>
 
-      <p> MSc student in Robotics at ETH Zurich interested in Computer Vision and Computer Graphics. </p>
+      <p> MSc student in Robotics at ETH Zurich focused on 3D Computer Vision and Graphics. </p>
 
       <hr />
 
@@ -34,7 +34,7 @@ permalink: /resume/
 
         <dd><em>MSc Robotics, Systems and Control</em>
           <strong>2021-2024</strong>
-          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. Created a custom multi-view object RGB-D dataset of textured ShapeNet models using Blender and an auto-encoder capable of single or multi-view voxel reconstruction with PyTorch. A small <a href="https://maturk.github.io/projects/object_reconstruction.html">demo</a> is available.<br><br>
+          Semester Project: Object 3D shape reconstruction from RGB-D images using trained shape priors. A small <a href="https://maturk.github.io/projects/object_reconstruction.html">demo</a> is available.<br><br>
           
           Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
           Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics,
@@ -56,10 +56,15 @@ permalink: /resume/
       <h3 id="employment">Employment</h3>
 
       <dl>
+        <dt>Research Assistant</dt>
+        <dd><em>Aalto University</em>
+          <strong>Dec 2023 - </strong>
+          Project related to 3D Gaussian splatting. Contributed to <a href="https://github.com/nerfstudio-project/gsplat">gsplat</a>. 
+        </dd>
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
-          <strong>April 2023 - </strong>
-          Working on neural inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project. Also worked on camera pose refinement with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and the various problems of registering poses of rgb and hyperspectral images.
+          <strong>April 2023 - Feb 2023 </strong>
+          Working on inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to the open-source <a href="https://docs.nerf.studio">Nerfstudio</a> project. Also worked on camera pose refinement with <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a> and the various problems of registering poses of rgb and hyperspectral images.
         </dd>
         <dt>Research Assistant</dt>
         <dd><em>Computer Vision and Learning Group (VLG), ETH Zurich</em>
