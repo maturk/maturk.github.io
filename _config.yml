@@ -21,13 +21,12 @@
 title: Matias Turkulainen
 email: matiasturkulainen@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  My website where I show some projects related to computer vision, computer graphics, and AI.
+  My website.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social media links
 github_username:  maturk
-linkedin_username: Matias-Turkulainen
 
 
 # Build settings

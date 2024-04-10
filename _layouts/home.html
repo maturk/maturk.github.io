@@ -29,24 +29,6 @@ layout: default
     </ul>
   {%- endif -%}
 
-  <h2 class="post-list-heading">Recent projects</h2>
-  <div class=""> <!--row project-list-->
-    {% assign sorted_projects = (site.projects | sort: 'priority') | reverse %}
-    {%- for project in sorted_projects -%}
-    {% if project.visible != false %}
-    <div class ="project-column "> 
-      <a href="{{ project.url | relative_url }}">
-        <div class="project-cell"> <!--col-sm-6 project-cell-->
-          <h3>{{ project.title | escape }}</h3>
-          <div class="project-image">
-            <img src="{{ site.baseurl }}/assets/images/{{ project.image }}">
-          </div>
-        </div>
-      </a>
-    </div>
-    
-    {%- endif -%}
-    {%- endfor -%}
   </div>
   {% if site.google_analytics %}
   {% include analytics.html %}

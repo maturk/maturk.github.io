@@ -1,8 +1,5 @@
 ---
 layout: cv
-title:  "Curriculum Vitae"
-date:   2022-12-31 22:18:45 +0100
-categories: page
 permalink: /resume/
 ---
 

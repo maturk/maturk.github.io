@@ -17,7 +17,7 @@ email: matiasturkulainen@gmail.com
         </div>
         <br>
       <p class = "right">
-          I am a Robotics student at ETH Zurich originally from Finland. I am interested in computer vision, computer graphics and AI. 
+          I am originally from Finland. I am interested in computer vision, computer graphics and AI. 
       </p>
     </div>
   </div>
