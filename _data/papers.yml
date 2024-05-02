@@ -1,0 +1,88 @@
+
+# ---------------------------------------------------------------
+# DN-Splatter
+# ---------------------------------------------------------------
+- year: "2024"
+  paper-logo: "https://github.com/maturk/dn-splatter/blob/gh-pages/static/images/some-preview.png?raw=true"
+  paper-title: "DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing"
+  paper-authors: 
+    - name: <b>Matias Turkulainen</b>
+      link: https://maturk.github.io
+      institutions: []
+    
+    - name: Xuqian Ren
+      link: https://xuqianren.github.io
+      institutions: []
+
+    - name: Iaroslav Melekhov
+      link: https://imelekhov.com
+      institutions: []
+
+    - name: Otto Seiskari
+      link: https://oseiskar.github.io
+      institutions: []
+
+    - name: Esa Rahtu
+      link: https://esa.rahtu.fi
+      institutions: []
+
+    - name: Juho Kannala
+      link: https://users.aalto.fi/~kannalj1/
+      institutions: []
+
+  institutions: 
+    - name: Aalto University
+
+  link-arxiv: https://arxiv.org/abs/2403.17822
+  link-projectpage: https://maturk.github.io/dn-splatter/
+  link-gitcode: https://github.com/maturk/dn-splatter/
+
+# ---------------------------------------------------------------
+# Deblur
+# ---------------------------------------------------------------
+- year: "2024"
+  paper-logo-mp4: "https://github.com/SpectacularAI/3dgs-deblur/blob/gh-pages/static/videos/synthetic_motion_blur_example.mp4?raw=true"
+  paper-title: "Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion"
+  paper-authors: 
+    - name: Otto Seiskari
+      link: https://oseiskar.github.io
+      institutions: []
+
+    - name: Jerry Ylilammi
+      link: https://www.ylilammi.com
+      institutions: []
+
+    - name: Valtteri Kaatrasalo
+      link: https://github.com/kaatrasa
+      institutions: []
+
+    - name:  Pekka Rantalankila
+      link: https://github.com/pekkaran
+      institutions: []
+
+    - name: <b>Matias Turkulainen</b>
+      link: https://maturk.github.io
+      institutions: []
+
+    - name: Juho Kannala
+      link: https://users.aalto.fi/~kannalj1/
+      institutions: []
+
+    - name: Esa Rahtu
+      link: https://esa.rahtu.fi
+      institutions: []
+
+    - name: Arno Solin
+      link: https://users.aalto.fi/~asolin/
+      institutions: []
+
+    
+  institutions: 
+    - name: Spectacular AI
+    - name: Aalto University
+    - name: Tampere University
+
+  link-arxiv: https://arxiv.org/abs/2403.13327
+  link-projectpage: https://spectacularai.github.io/3dgs-deblur/
+  link-gitcode: https://github.com/SpectacularAI/3dgs-deblur 
+  paper-pub: 
