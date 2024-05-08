@@ -36,6 +36,7 @@
   link-arxiv: https://arxiv.org/abs/2403.17822
   link-projectpage: https://maturk.github.io/dn-splatter/
   link-gitcode: https://github.com/maturk/dn-splatter/
+  link-gitcode-button: https://ghbtns.com/github-btn.html?user=maturk&repo=dn-splatter&type=star&count=true
 
 # ---------------------------------------------------------------
 # Deblur
@@ -84,5 +85,6 @@
 
   link-arxiv: https://arxiv.org/abs/2403.13327
   link-projectpage: https://spectacularai.github.io/3dgs-deblur/
-  link-gitcode: https://github.com/SpectacularAI/3dgs-deblur 
+  link-gitcode: https://github.com/SpectacularAI/3dgs-deblur
+  link-gitcode-button: https://ghbtns.com/github-btn.html?user=SpectacularAi&repo=3dgs-deblur&type=star&count=true
   paper-pub: 

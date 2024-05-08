@@ -81,20 +81,21 @@ I am originally from Finland. I am mainly interested in computer vision and comp
 
 			{% if paper.link-gitcode %}
 			<a href="{{paper.link-gitcode}}" target="_blank" rel="noopener">
-				<i class="fa fa-github" aria-hidden="true"></i> Code </a>  
-				<!-- <iframe style="margin-left: 2px; margin-bottom:-5px;" 
+				<i class="fa fa-github" aria-hidden="true"></i> Github </a>  
+	        {% endif %}
+
+			{% if paper.link-gitcode-button %}
+			<a href="{{paper.link-gitcode}}" target="_blank" rel="noopener">
+				<i class="fa " aria-hidden="true"></i></a>  
+				<iframe style="margin-left: 2px; margin-bottom:-5px;" 
 					frameborder="0" scrolling="0" width="100px" height="20px"
-	                src="https://ghbtns.com/github-btn.html?user=liruilong940607&repo=Pose2Seg&type=star&count=true" >
-	        	</iframe> -->
+	                src="{{paper.link-gitcode-button}}">
+	        	</iframe>
 	        {% endif %}
 
 	        {% if paper.link-gitdata %}
 			<a href="{{paper.link-gitdata}}" target="_blank" rel="noopener">
 				<i class="fa fa-github" aria-hidden="true"></i> Dataset </a> 
-				<!-- <iframe style="margin-left: 2px; margin-bottom:-5px;" 
-					frameborder="0" scrolling="0" width="100px" height="20px"
-	                src="https://ghbtns.com/github-btn.html?user=liruilong940607&repo=OCHumanApi&type=star&count=true" >
-	        	</iframe> -->
 	        {% endif %}
 
 	        {% if paper.link-video %}
