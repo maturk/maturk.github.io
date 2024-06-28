@@ -21,7 +21,7 @@ layout: default
 	</div></td>
 </tr>
 
-I am originally from Finland. I am mainly interested in computer vision and computer graphics, with a specific focus on 3D vision and inverse rendering. I will (soon, I hope :D ) graduate from my MSc and start a PhD at Aalto University supervised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). I am looking for research internships sometime in the late fall or spring 2025. I enjoy riding my bike and drinking coffee.
+I am from Finland 🇫🇮. I am interested in learning new things, and lately, my focus has been on computer vision, computer graphics, and programming. Besides that, I enjoy riding my bike and drinking coffee. I am starting a PhD with [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/).
 
 ## Publications
 {% assign years = site.data.papers | group_by:"year" | sort: "name" | reverse %}
@@ -155,4 +155,4 @@ May, 6th 2024 | Machine Learning Coffee Seminar | Finnish Center for Artificial 
 
 ---
 <br>
-> There’s a Finnish saying: "Onni ei tule etsien, vaan eläen" — Happiness is not found by searching but by living.
+> No man is an island, entire of itself; every man is a piece of the continent, a part of the main. And therefore never send to know for whom the bell tolls; it tolls for thee. - J. Donne
