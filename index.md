@@ -151,7 +151,7 @@ Date | Event | Details
 -----|-------|--------
 April, 24th 2024 | FMX 2024  | Survey on NeRFs and 3DGS for the Lighting & Rendering track organized by [Christophe Hery](https://www.linkedin.com/in/christophehery/) in Stuttgart, Germany. Thank you all for the great time there!
 May, 6th 2024 | Machine Learning Coffee Seminar | Finnish Center for Artificial Intelligence (FCAI) [talk](https://fcai.fi/calendar/2024/5/6/juho-kannala-tba) on neural rendering.
-
+July, 6th 2024 | Gaussian splatting online meetup | Talk about Nerfstudio project for splatting enthusiasts. YouTube [link](https://www.youtube.com/watch?v=kfXrnkXiN8E).
 
 ---
 <br>

@@ -88,3 +88,59 @@
   link-gitcode: https://github.com/SpectacularAI/3dgs-deblur
   link-gitcode-button: https://ghbtns.com/github-btn.html?user=SpectacularAi&repo=3dgs-deblur&type=star&count=true
   paper-pub: 
+
+# ---------------------------------------------------------------
+# gsplat
+# ---------------------------------------------------------------
+- year: "2024"
+  paper-logo: "./assets/gsplat.jpg"
+  paper-title: "gsplat: An Open-Source Library for Gaussian Splatting"
+  paper-authors: 
+    - name: Vickie Ye
+      link: https://people.eecs.berkeley.edu/~vye/
+      institutions: []
+
+    - name: Ruilong Li
+      link: https://www.liruilong.cn/
+      institutions: []
+
+    - name: Justin Kerr
+      link: https://kerrj.github.io/
+      institutions: []
+
+    - name: <b> Matias Turkulainen</b>
+      link: 
+      institutions: []
+
+    - name: Brent Yi
+      link: https://scholar.google.com/citations?user=Ecy6lXwAAAAJ&hl=en
+      institutions: []
+
+    - name: Zhuoyang Pan
+      link: https://panzhy.com/
+      institutions: []
+    
+    - name: Otto Seiskari
+      link: https://oseiskar.github.io/
+      institutions: []
+    
+    - name: Jianbo Ye
+      link: http://www.jianboye.org/
+      institutions: []
+
+    - name: Jeffrey Hu
+      link: 
+      institutions: []
+
+    - name: Matthew Tancik
+      link: https://www.matthewtancik.com/about-me
+      institutions: []
+
+    - name: Angjoo Kanazawa
+      link: https://people.eecs.berkeley.edu/~kanazawa/
+      institutions: []
+
+  link-arxiv: https://arxiv.org/abs/2409.06765
+  link-projectpage: https://docs.gsplat.studio/main/
+  link-gitcode: https://github.com/nerfstudio-project/gsplat
+  link-gitcode-button: https://ghbtns.com/github-btn.html?user=nerfstudio-project&repo=gsplat&type=star&count=true
