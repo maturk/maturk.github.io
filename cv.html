@@ -567,14 +567,14 @@
     dl dt {
       margin: 0;
       padding: 0;
-      font-size: 140%;
+      font-size: 120%;
     }
 
     dl dd {
-      margin: 0 0 1.5em;
+      margin: 0 0 0.90em;
       padding: 0;
       font-size: 80%;
-      line-height: 1.4em;
+      line-height: 1.2em;
     }
 
     dl strong {
@@ -656,17 +656,20 @@
         text-transform: uppercase;
         font-style: italic;
         letter-spacing: 2px;
+        font-size: 22px;
         font-weight: normal;
       }
 
       h3 {
         float: left;
+        font-size: 22px;
         width: 16%;
       }
 
       h3+p {
         float: left;
         width: 78%;
+        font-size: 16px;
       }
 
       ul dl dt {
@@ -710,7 +713,7 @@
       }
 
       dl em {
-        font-size: 130%;
+        font-size: 120%;
         font-style: normal;
       }
     }
@@ -721,20 +724,17 @@
 
   <div class="container">
     <div class="resume">
-      <h1>Matias Turkulainen</h1>
-
-      <h2>PhD Student</h2>
+      <h2><br>Matias Turkulainen</h1>
 
       <blockquote>
-        <p><a href="matiasturkulainen@gmail.com">matiasturkulainen@gmail.com</a><br />
-          (+358) 40-7772948</p>
+        <p>matiasturkulainen@gmail.com<br/><a href="maturk.github.io">maturk.github.io</a></p>
       </blockquote>
 
       <hr />
 
       <h3 id="profile">Profile</h3>
 
-      <p> PhD student at Aalto University focusing on 3D reconstruction.</p>
+      <p> PhD student at Aalto University focusing on 3D reconstruction in challenging, real-world environments.</p>
 
       <hr />
 
@@ -746,32 +746,27 @@
 
         <dd><em>PhD student, Department of Computer Science</em>
           <strong>2024-2028</strong>
+          Advisors: Prof. Juho Kannala and Prof. Arno Solin.
         </dd>
 
         <dt>ETH Zurich</dt>
         <dd><strong>Zurich, Switzerland</strong></dd>
-
-        <dd><em>MSc Robotics, Systems and Control</em>
+        <dd><em>MSc Robotics, Systems and Control </em>
           <strong>2021 - Nov, 2024</strong>
-          Relevant Coursework: Vision Algorithms for Mobile Robots 5.5/6, Image Analysis and Computer Vision 5.25/6,
-          Robot Dynamics 5.25/6, Introduction to Machine Learning 5.25/6, Computational Models of Motion 5.25/6, Computer Graphics, 
-          Machine Perception, Probabilistic Artificial Intelligence, and Seminar in Computer Vision. 
+          Focus on computer vision and machine learning. Semester project @ ASL and MSc thesis @ CVG.
         </dd>
 
         <dt>University of Glasgow</dt>
         <dd><strong>Glasgow, Scotland</strong></dd>
-
         <dd><em>BEng (Hons) in Mechanical Engineering with Aeronautics</em>
           <strong>2017-2021</strong>
-          Grade: 1st class honours. Cumulative GPA: 20.5/22. Bachelor’s project: “Comparison of SLAM Algorithms for
-          Drone Operations” using ROS + Gazebo simulations.
+          Grade: 1st class honours. Cumulative GPA: 20.5/22.
         </dd>
       </dl>
 
       <hr />
 
       <h3 id="experience">Experience</h3>
-
       <dl>
         <dt>Research Assistant</dt>
         <dd><em>Aalto University</em>
@@ -781,18 +776,28 @@
         <dt>Research Intern</dt>
         <dd><em>VTT Technical Research Centre of Finland</em>
           <strong>April 2023 - Nov 2023 </strong>
-          Working on inverse rendering. Project related to fusing rgb + hyperspectral imaging into hyperspectral radiance fields for material classification in 3D. Contributing to <a href="https://docs.nerf.studio">Nerfstudio</a> and <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a>.
+          Project related to hyperspectral radiance fields for material classification in 3D. Contributing to <a href="https://docs.nerf.studio">Nerfstudio</a> and <a href="https://github.com/maturk/BARF-nerfstudio">BARF-nerfstudio</a>.
         </dd>
         <dt>Research Assistant</dt>
         <dd><em>Computer Vision and Learning Group (VLG), ETH Zurich</em>
           <strong>Feb 2022 - July 2022</strong>
-          Project related to human pose estimation from images. Publication: <a href="https://sanweiliti.github.io/egobody/egobody.html">EgoBody</a>. Guided by doctoral student Siwei Zhang (Doctorate at D-INFK, ETH Zurich): <a
-            href="siwei.zhang@inf.ethz.ch">siwei.zhang@inf.ethz.ch</a>.
+          Project related to human pose estimation from images. Publication: <a href="https://sanweiliti.github.io/egobody/egobody.html">EgoBody</a>. Guided by doctoral student Siwei Zhang (Doctorate at D-INFK, ETH Zurich).
         </dd>
         <dt>Drone Systems Trainee</dt>
         <dd><em>Nokia</em>
           <strong>Jun 2020 - Aug 2021</strong>
           R&D intern at Nokia working with LTE connected drones. Worked on camera based precision landing with Jetson Nano and OpenCV. 
+        </dd>
+      </dl>
+
+      <hr />
+      <h3 id="experience">Publications</h3>
+      <dl>
+        <dd>DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing, ArXiv preprint, 2024.
+        </dd>
+        <dd>Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion, ECCV, 2024
+        </dd>
+        <dd>gsplat: An Open-Source Library for Gaussian Splatting, Arxiv preprint, 2024.
         </dd>
       </dl>
 
@@ -804,33 +809,25 @@
         <li>Python</li>
         <li>C++</li>
         <li>CUDA</li>
-        <li>Linux</li>
         <li>Blender</li>
-        <li>Packages: PyTorch, OpenCV, Open3D</li>
+        <li>PyTorch</li>
+        <li>OpenCV</li>
       </ol>
 
       <hr />
 
       <h3>Links</h3>
-      Website: <a href="https://maturk.github.io"> https://maturk.github.io</a>
-      <p>
       <ol>
         <li><a href="https://github.com/maturk">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/matias-turkulainen/">LinkedIn</a></li>
         <li><a href="https://scholar.google.com/citations?user=9ixpc8MAAAAJ&hl=en">Scholar</a></li>
+        <li><a href="https://www.linkedin.com/in/matias-turkulainen/">LinkedIn</a></li>
       </ol>
-      </p>
 
       <h3 id="footer">Footer</h3>
-
       <p>Matias Turkulainen &#8212; <a href="matiasturkulainen@gmail.com">matiasturkulainen@gmail.com</a> &#8212; (+358)
         40-7772948</p>
-
       <hr />
-
     </div>
   </div>
-
 </body>
-
 </html>
