@@ -8,7 +8,7 @@ layout: default
     <td><div class="profile-doc">
 		Ph.D. Student @ Aalto University <br>
         MSc @ ETH Zurich <br>
-		<br> 
+        <br>
 		<a href="mailto:matiasturkulainen@gmail.com">
 			<i class="fa fa-envelope" aria-hidden="true"></i> matiasturkulainen@gmail.com</a> <br> 
 		<a href="https://github.com/maturk">
@@ -17,11 +17,20 @@ layout: default
 			<i class="fa fa-google" aria-hidden="true"></i> Google Scholar </a> <br> 
 		<a href="https://www.linkedin.com/in/matias-turkulainen/">
 			<i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn </a>
-            <br>
+        <br><br>
+        VAT ID: FI-3485521-8
+        <br>
 	</div></td>
 </tr>
 
-I am from Finland 🇫🇮. I am interested in learning new things, and lately, my focus has been on computer vision, computer graphics, and programming. Besides that, I enjoy riding my bike and drinking coffee. I am starting a PhD with [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/).
+I am from Finland 🇫🇮. I am interested in 3D computer vision, riding my bike, and drinking coffee. I am a Ph.D. student avised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
+
+
+
+
+
+
+
 
 ## Publications
 {% assign years = site.data.papers | group_by:"year" | sort: "name" | reverse %}
