@@ -1,9 +1,93 @@
+# ---------------------------------------------------------------
+# DeSplat
+# ---------------------------------------------------------------
+- year: "2025"
+  paper-logo: "https://aaltoml.github.io/desplat/asset/firstpage_desplat.png"
+  paper-title: "DeSplat: Decomposed Gaussian Splatting for Distractor-Free Rendering"
+  paper-authors: 
+    - name: Yihao Wang
+      link: https://johanna0626.github.io
+      institutions: [Technical University of Munich]
+
+    - name: Marcus Klasson
+      link: https://marcusklasson.github.io
+      institutions: [Aalto University]
+
+    - name: <b>Matias Turkulainen</b>
+      link: https://maturk.github.io
+      institutions: []
+    
+    - name: Shuzhe Wang
+      link: https://ffrivera0.github.io
+      institutions: [Aalto University]
+
+    - name: Juho Kannala
+      link: https://users.aalto.fi/~kannalj1/
+      institutions: [Aalto University, Oulu University]
+
+    - name: Arno Solin
+      link: https://users.aalto.fi/~asolin/
+      institutions: [Aalto University]
+
+  link-arxiv: https://arxiv.org/abs/2411.19756
+  link-projectpage: https://aaltoml.github.io/desplat/
+  link-gitcode: https://github.com/AaltoML/desplat/
+  link-gitcode-button: https://ghbtns.com/github-btn.html?user=AaltoML&repo=desplat&type=star&count=true
+  paper-pub: ArXiv
+
+# ---------------------------------------------------------------
+# AGS-Mesh
+# ---------------------------------------------------------------
+- year: "2025"
+  paper-logo: "https://jiepengwang.github.io/images/ags_mesh.png"
+  paper-title: "AGS-Mesh: Adaptive Gaussian Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones"
+  paper-authors: 
+    - name: Xuqian Ren
+      link: https://xuqianren.github.io
+      institutions: [Tampere University]
+
+    - name: <b>Matias Turkulainen</b>
+      link: https://maturk.github.io
+      institutions: [Aalto University]
+    
+    - name: Jiepeng Wang
+      link: https://jiepengwang.github.io
+      institutions: [University of Hong Kong]
+
+    - name: Otto Seiskari
+      link: https://oseiskar.github.io
+      institutions: []
+
+    - name: Iaroslav Melekhov
+      link: https://imelekhov.com
+      institutions: []
+
+    - name: Esa Rahtu
+      link: https://esa.rahtu.fi
+      institutions: [Tampere University]
+
+    - name: Juho Kannala
+      link: https://users.aalto.fi/~kannalj1/
+      institutions: [Aalto University, Oulu University]
+
+  institutions: 
+    - name: Aalto University
+    - name: Tampere University
+    - name: Spectacular AI
+    - name: University of Hong Kong
+    - name: Oulu University
+
+  link-arxiv: https://arxiv.org/abs/2411.19271
+  link-projectpage: https://xuqianren.github.io/ags_mesh_website/
+  link-gitcode: https://github.com/maturk/dn-splatter/
+  link-gitcode-button: https://ghbtns.com/github-btn.html?user=maturk&repo=dn-splatter&type=star&count=true
+  paper-pub: International Conference on 3D Vision (3DV), 2025
 
 # ---------------------------------------------------------------
 # DN-Splatter
 # ---------------------------------------------------------------
 - year: "2024"
-  paper-logo: "https://github.com/maturk/dn-splatter/blob/gh-pages/static/images/some-preview.png?raw=true"
+  paper-logo: "https://github.com/maturk/dn-splatter/blob/gh-pages/static/images/overview.png?raw=true"
   paper-title: "DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing"
   paper-authors: 
     - name: <b>Matias Turkulainen</b>
@@ -22,12 +106,12 @@
       link: https://oseiskar.github.io
       institutions: []
 
-    - name: Esa Rahtu
-      link: https://esa.rahtu.fi
-      institutions: []
-
     - name: Juho Kannala
       link: https://users.aalto.fi/~kannalj1/
+      institutions: []
+    
+    - name: Esa Rahtu
+      link: https://esa.rahtu.fi
       institutions: []
 
   institutions: 

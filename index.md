@@ -23,7 +23,7 @@ layout: default
 	</div></td>
 </tr>
 
-I am from Finland 🇫🇮. I am interested in 3D computer vision, riding my bike, and drinking coffee. I am a Ph.D. student avised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
+I am from Finland 🇫🇮. I am interested in 3D computer vision, riding my bike, and drinking coffee. I am a Ph.D. student advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
 
 
 
@@ -158,6 +158,7 @@ I am from Finland 🇫🇮. I am interested in 3D computer vision, riding my bik
 
 Date | Event | Details
 -----|-------|--------
+Dec, 2nd 2024 | FCAI SIG Workshop| FCAI Special Interest Group, AI for Computer Vision workshop. Talk about 3D Vision research. [Link](https://fcai.fi/calendar/2024/12/3/fcai-sig-in-computer-vision-workshop)
 April, 24th 2024 | FMX 2024  | Survey on NeRFs and 3DGS for the Lighting & Rendering track organized by [Christophe Hery](https://www.linkedin.com/in/christophehery/) in Stuttgart, Germany. Thank you all for the great time there!
 May, 6th 2024 | Machine Learning Coffee Seminar | Finnish Center for Artificial Intelligence (FCAI) [talk](https://fcai.fi/calendar/2024/5/6/juho-kannala-tba) on neural rendering.
 July, 6th 2024 | Gaussian splatting online meetup | Talk about Nerfstudio project for splatting enthusiasts. YouTube [link](https://www.youtube.com/watch?v=kfXrnkXiN8E).

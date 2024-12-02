@@ -13,12 +13,13 @@
 
 .content .paper-list {
 	line-height: 100%;
-	font-size: 16px;
+	font-size: 14px;
 	.paper-logo {
-        width: 150px;
+        width: 200px;
         height: auto;
+        max-height: 150px;
         position: center;
-        margin: auto 0px auto 0;
+        margin: 0px 0px 0px 0;
     }
 	.paper-title {
 		font-size: 18px;
@@ -38,8 +39,8 @@
     }
 
     .project-logo {
-        width: auto;
-        height: auto;
+        width: 150px;
+        height: 100px;
         max-height: 150px;
         max-width: 100%;
         position: relative;
