@@ -33,7 +33,7 @@
   link-projectpage: https://aaltoml.github.io/desplat/
   link-gitcode: https://github.com/AaltoML/desplat/
   link-gitcode-button: https://ghbtns.com/github-btn.html?user=AaltoML&repo=desplat&type=star&count=true
-  paper-pub: ArXiv
+  paper-pub: Conference on Computer Vision and Pattern Recognition (CVPR), 2025
 
 # ---------------------------------------------------------------
 # AGS-Mesh
@@ -229,3 +229,4 @@
   link-projectpage: https://docs.gsplat.studio/main/
   link-gitcode: https://github.com/nerfstudio-project/gsplat
   link-gitcode-button: https://ghbtns.com/github-btn.html?user=nerfstudio-project&repo=gsplat&type=star&count=true
+  paper-pub: Journal of Machine Learning Research (JMLR), 2025
