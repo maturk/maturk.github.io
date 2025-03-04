@@ -4,7 +4,7 @@ layout: default
 
 ## About Me
 <tr>
-    <td><img class="profile-picture" src="me_2.JPG"></td>
+    <td><img class="profile-picture" src="me_canyon.jpg"></td>
     <td><div class="profile-doc">
 		Ph.D. Student @ Aalto University <br>
         MSc @ ETH Zurich <br>
