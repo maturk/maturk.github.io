@@ -3,33 +3,38 @@ layout: default
 ---
 
 ## About Me
-<tr>
-    <td><img class="profile-picture" src="me_canyon.jpg"></td>
-    <td><div class="profile-doc">
-		Ph.D. Student @ Aalto University <br>
-        MSc @ ETH Zurich <br>
-        <br>
-		<a href="mailto:matiasturkulainen@gmail.com">
-			<i class="fa fa-envelope" aria-hidden="true"></i> matiasturkulainen@gmail.com</a> <br> 
-		<a href="https://github.com/maturk">
-			<i class="fa fa-github" aria-hidden="true"></i> Github </a> <br> 
-		<a href="https://scholar.google.com/citations?user=9ixpc8MAAAAJ&hl=en&oi=ao">
-			<i class="fa fa-google" aria-hidden="true"></i> Google Scholar </a> <br> 
-		<a href="https://www.linkedin.com/in/matias-turkulainen/">
-			<i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn </a>
-        <br><br>
-        VAT ID: FI-3485521-8
-        <br>
-	</div></td>
-</tr>
+<div class="profile-section"> <div class="profile-image-container">
+        <img class="profile-picture" src="assets/me_canyon.jpg" alt="Matias Turkulainen's profile picture showing a canyon background">
+    </div>
 
-I am from Finland 🇫🇮. I am interested in 3D computer vision, riding my bike, and drinking coffee. I am a Ph.D. student advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
+    <div class="profile-doc"> <p>Ph.D. Student @ Aalto University</p> <p>MSc @ ETH Zurich</p>
 
+        <ul class="contact-list">
+            <li>
+                <a href="mailto:matiasturkulainen@gmail.com">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> matiasturkulainen@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/maturk">
+                    <i class="fa fa-github" aria-hidden="true"></i> Github
+                </a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?user=9ixpc8MAAAAJ&hl=en&oi=ao">
+                    <i class="fa fa-google" aria-hidden="true"></i> Google Scholar
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/matias-turkulainen/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+            </li>
+        </ul>
+    </div>
 
-
-
-
-
+</div>
+I am a computer vision PhD candidate from Finland 🇫🇮. I am currently a research intern at <a href="https://www.nianticspatial.com/en">Niantic Spatial</a> <img src="assets/favicon-niantic-black.png" alt="Niantic Favicon" style="height: 1.2em; width: 1.2em; vertical-align: middle; margin-left: 0.2em; object-fit: contain;"> in London. I am advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
 
 
 ## Publications
