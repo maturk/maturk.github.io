@@ -3,11 +3,14 @@ layout: default
 ---
 
 ## About Me
-<div class="profile-section"> <div class="profile-image-container">
-        <img class="profile-picture" src="assets/me_canyon.jpg" alt="Matias Turkulainen's profile picture showing a canyon background">
+<div class="profile-section">
+	<div class="profile-image-container">
+		<img class="profile-picture" src="assets/me_canyon.jpg" alt="Matias Turkulainen's profile picture showing a canyon background" loading="lazy">
     </div>
 
-    <div class="profile-doc"> <p>Ph.D. Student @ Aalto University</p> <p>MSc @ ETH Zurich</p>
+	<div class="profile-doc">
+		<p>PhD Student @ Aalto University</p>
+		<p>MSc @ ETH Zurich</p>
 
         <ul class="contact-list">
             <li>
@@ -17,7 +20,7 @@ layout: default
             </li>
             <li>
                 <a href="https://github.com/maturk">
-                    <i class="fa fa-github" aria-hidden="true"></i> Github
+					<i class="fa fa-github" aria-hidden="true"></i> GitHub
                 </a>
             </li>
             <li>
@@ -34,7 +37,7 @@ layout: default
     </div>
 
 </div>
-I am a computer vision PhD candidate from Finland 🇫🇮. I am currently a research intern at <a href="https://www.nianticspatial.com/en">Niantic Spatial</a> <img src="assets/favicon-niantic-black.png" alt="Niantic Favicon" style="height: 1.2em; width: 1.2em; vertical-align: middle; margin-left: 0.2em; object-fit: contain;"> in London. I am advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
+I am a computer vision PhD candidate from Finland 🇫🇮. I was a research intern at <a href="https://www.nianticspatial.com/en">Niantic Spatial</a> <img src="assets/favicon-niantic-black.png" alt="Niantic Favicon" style="height: 1.2em; width: 1.2em; vertical-align: middle; margin-left: 0.2em; object-fit: contain;"> in London in Summer 2025, and I will return for another internship in Summer 2026. I also work part-time at a Finnish-based stealth startup 🥷. I am advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
 
 
 ## Publications

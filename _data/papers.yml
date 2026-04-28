@@ -1,4 +1,16 @@
 # ---------------------------------------------------------------
+# CVPR 2026
+# ---------------------------------------------------------------
+- year: "2026"
+  paper-title: "Coming soon..."
+  paper-authors:
+    - name: <b>Niantic Spatial team</b>
+      link: https://maturk.github.io
+      institutions: []
+
+  paper-pub: Conference on Computer Vision and Pattern Recognition (CVPR), 2026
+
+# ---------------------------------------------------------------
 # DeSplat
 # ---------------------------------------------------------------
 - year: "2025"
