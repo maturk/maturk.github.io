@@ -26,6 +26,9 @@ collections:
 minima:
   date_format: "%b %-d, %Y"
   skin: auto
+
+favicon: true
+favicon_location: "/assets/favicon.svg"
   
 google_analytics: G-5XWRW1V88P
 
