@@ -9,6 +9,16 @@ $image-size: 85px;
  * Build Variables, don't touch
  */
 
-$max-width: 700px;
-$med-width: 600px;
+$max-width: 820px;
+$med-width: 720px;
 $small-width: 480px;
+
+:root {
+    --bg: #ffffff;
+    --fg: #272727;
+    --fg-muted: #555555;
+    --accent: #{$accent};
+    --border: rgba(0, 0, 0, 0.12);
+    --code-bg: #f6f6f6;
+    --card-bg: #fafafa;
+}

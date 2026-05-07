@@ -3,30 +3,66 @@
 @import "style";
 
 .content .paper-list {
-	line-height: 100%;
-	font-size: 14px;
-	.paper-logo {
-        width: 200px;
-        height: auto;
-        max-height: 150px;
-        position: center;
-        margin: 0px 0px 0px 0;
+    line-height: 1.4;
+    font-size: 14px;
+    margin: 14px 0;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+
+    tr, td, th {
+        border: none;
+        background: transparent;
+        padding: 8px 10px;
+        vertical-align: middle;
     }
-	.paper-title {
-		font-size: 18px;
-		height: 25%;
-		font-weight: bold;
+    tr:nth-child(2n) {
+        background: transparent;
+    }
+    &:hover {
+        background-color: var(--card-bg);
+    }
+
+    img.paper-logo {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        max-height: 150px;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+    div.paper-logo {
+        text-align: center;
+        margin: 0 auto;
+    }
+    div.paper-logo video {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        max-height: 150px;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+    .paper-title {
+        font-size: 17px;
+        font-weight: bold;
+        color: var(--fg);
+        margin: 0 0 4px 0;
     }
     .paper-authors {
-    	height: 25%;
+        color: var(--fg);
+        margin: 0 0 4px 0;
     }
     .paper-pub {
-    	height: 25%;
-    	font-weight: bold;
-    	font-style: italic;
+        font-weight: bold;
+        font-style: italic;
+        color: var(--fg-muted);
+        margin: 0 0 6px 0;
     }
     .paper-links {
-    	height: 25%;
+        margin: 0;
+        a { margin-right: 10px; }
     }
 
     .project-logo {
@@ -34,7 +70,85 @@
         height: 100px;
         max-height: 150px;
         max-width: 100%;
-        position: relative;
         margin: auto;
+    }
+}
+
+.content .project-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin: 10px 0;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: transparent;
+        transition: background-color 0.15s ease;
+    }
+    li:hover {
+        background-color: var(--card-bg);
+    }
+    a {
+        font-weight: bold;
+    }
+}
+
+.content .profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 16px;
+
+    .profile-image-container {
+        flex: 0 0 auto;
+        width: 180px;
+        max-width: 35%;
+
+        img.profile-picture {
+            float: none;
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+    }
+    .profile-doc {
+        flex: 1 1 280px;
+        min-width: 0;
+
+        p {
+            margin: 4px 0;
+        }
+    }
+    .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0 0;
+
+        li {
+            margin: 4px 0;
+        }
+        a {
+            color: var(--fg);
+        }
+        a:hover {
+            color: var(--accent);
+        }
+    }
+
+    @media (max-width: $small-width) {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        .profile-image-container {
+            width: 160px;
+            max-width: 50%;
+        }
     }
 }

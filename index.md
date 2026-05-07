@@ -56,7 +56,7 @@ I am a computer vision PhD candidate from Finland 🇫🇮. I was a research int
 	{% if paper.paper-logo-mp4 %}
     <td>
 		<div class="paper-logo">
-		<video width="100%" height="100%" muted autoplay loop>
+		<video muted autoplay loop playsinline>
 			<source src="{{paper.paper-logo-mp4}}" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
@@ -149,17 +149,18 @@ I am a computer vision PhD candidate from Finland 🇫🇮. I was a research int
 
 ---
 ## Open-source projects
-<tr>
-    <td><div>
+<ul class="project-list">
+    <li>
         <a href="https://github.com/nerfstudio-project/gsplat">
-			<i class="fa fa-github" aria-hidden="true"></i> gsplat:</a> a modular reimplementation of the 3D Gaussian Splatting backend.
-            <br> 
-            <br> 
+            <i class="fa fa-github" aria-hidden="true"></i> gsplat
+        </a> — a modular reimplementation of the 3D Gaussian Splatting backend.
+    </li>
+    <li>
         <a href="https://github.com/nerfstudio-project/nerfstudio">
-			<i class="fa fa-github" aria-hidden="true"></i>  Nerfstudio:</a> I am a maintainer on the collaborative Nerfstudio project, trying to bring this technology to more users. I am pretty active on Discord too (@maturk).
-            <br> 
-	</div></td>
-</tr>
+            <i class="fa fa-github" aria-hidden="true"></i> Nerfstudio
+        </a> — maintainer on the collaborative Nerfstudio project, working to bring this technology to more users. Active on Discord (@maturk).
+    </li>
+</ul>
 
 ---
 ## Invited talks
