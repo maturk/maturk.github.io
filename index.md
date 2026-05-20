@@ -37,7 +37,7 @@ layout: default
     </div>
 
 </div>
-I am a computer vision PhD candidate from Finland 🇫🇮. I was a research intern at <a href="https://www.nianticspatial.com/en">Niantic Spatial</a> <img src="assets/favicon-niantic-black.png" alt="Niantic Favicon" style="height: 1.2em; width: 1.2em; vertical-align: middle; margin-left: 0.2em; object-fit: contain;"> in London in Summer 2025, and I will return for another internship in Summer 2026. I also work part-time at a Finnish-based stealth startup 🥷. I am advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). Feel free to reach out for research or business inquiries.
+I'm a computer vision PhD candidate at Aalto University 🇫🇮, advised by [Juho Kannala](https://users.aalto.fi/~kannalj1/) and [Arno Solin](https://users.aalto.fi/~asolin/). I am also a research intern at <a href="https://www.nianticspatial.com/en">Niantic Spatial</a> <img src="assets/favicon-niantic-black.png" alt="" style="height: 1.2em; width: 1.2em; vertical-align: middle; margin-left: 0.2em; object-fit: contain;"> in London (Summer 2025, returning Summer 2026), and part-time engineer at a Finnish stealth startup 🥷. My research focuses on 3D reconstruction and neural rendering. Feel free to reach out for research or business inquiries.
 
 
 ## Publications
