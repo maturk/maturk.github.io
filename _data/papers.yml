@@ -1,13 +1,50 @@
 # ---------------------------------------------------------------
-# CVPR 2026
+# Cross-View Splatter (CVPR 2026)
 # ---------------------------------------------------------------
 - year: "2026"
-  paper-title: "Coming soon..."
+  paper-logo: "https://nianticspatial.github.io/cross-view-splatter/resources/teaser_cross_view_splatter.jpg"
+  paper-title: "Cross-View Splatter: Feed-Forward View Synthesis with Georeferenced Images"
   paper-authors:
-    - name: <b>Niantic Spatial team</b>
+    - name: <b>Matias Turkulainen</b>
       link: https://maturk.github.io
-      institutions: []
+      institutions: [Aalto University]
 
+    - name: Akshay Krishnan
+      link: https://akshayjkrishnan.github.io
+      institutions: [Georgia Tech]
+
+    - name: Filippo Aleotti
+      link: https://filippoaleotti.github.io/website/
+      institutions: [Niantic Spatial]
+
+    - name: Mohamed Sayed
+      link: https://msayed.com
+      institutions: [Niantic Spatial]
+
+    - name: Guillermo Garcia-Hernando
+      link: https://guille0.github.io
+      institutions: [Niantic Spatial]
+
+    - name: Juho Kannala
+      link: https://users.aalto.fi/~kannalj1/
+      institutions: [Aalto University, University of Oulu]
+
+    - name: Arno Solin
+      link: https://users.aalto.fi/~asolin/
+      institutions: [Aalto University, ELLIS Institute Finland]
+
+    - name: Gabriel Brostow
+      link: http://www0.cs.ucl.ac.uk/staff/g.brostow/
+      institutions: [UCL]
+
+    - name: Daniyar Turmukhambetov
+      link: https://dantkz.github.io
+      institutions: [Niantic Spatial]
+
+  link-arxiv: https://arxiv.org/abs/2605.19656
+  link-projectpage: https://nianticspatial.github.io/cross-view-splatter/
+  link-gitcode: https://github.com/nianticspatial/cross-view-splatter
+  link-gitcode-button: https://ghbtns.com/github-btn.html?user=nianticspatial&repo=cross-view-splatter&type=star&count=true
   paper-pub: Conference on Computer Vision and Pattern Recognition (CVPR), 2026
 
 # ---------------------------------------------------------------
