@@ -1,7 +1,11 @@
+# Set cv-feature: true to include a paper in cv.pdf; false (or omit) hides it.
+
 # ---------------------------------------------------------------
 # Cross-View Splatter (CVPR 2026)
 # ---------------------------------------------------------------
 - year: "2026"
+  cv-feature: true
+  paper-pub-short: "CVPR 2026"
   paper-logo: "https://nianticspatial.github.io/cross-view-splatter/resources/teaser_cross_view_splatter.jpg"
   paper-title: "Cross-View Splatter: Feed-Forward View Synthesis with Georeferenced Images"
   paper-authors:
@@ -51,6 +55,8 @@
 # FIORD
 # ---------------------------------------------------------------
 - year: "2025"
+  cv-feature: false
+  paper-pub-short: "SCIA 2025"
   paper-logo: "https://parmisian.github.io/fiord360.github.io/static/images/Presentation-6-1-1.png"
   paper-title: "FIORD: A Fisheye Indoor-Outdoor Dataset with LIDAR Ground Truth for 3D Scene Reconstruction and Benchmarking"
   paper-authors:
@@ -87,6 +93,8 @@
 # DeSplat
 # ---------------------------------------------------------------
 - year: "2025"
+  cv-feature: true
+  paper-pub-short: "CVPR 2025"
   paper-logo: "https://aaltoml.github.io/desplat/asset/firstpage_desplat.png"
   paper-title: "DeSplat: Decomposed Gaussian Splatting for Distractor-Free Rendering"
   paper-authors: 
@@ -124,6 +132,8 @@
 # AGS-Mesh
 # ---------------------------------------------------------------
 - year: "2025"
+  cv-feature: true
+  paper-pub-short: "3DV 2025"
   paper-logo: "https://jiepengwang.github.io/images/ags_mesh.png"
   paper-title: "AGS-Mesh: Adaptive Gaussian Splatting and Meshing with Geometric Priors for Indoor Room Reconstruction Using Smartphones"
   paper-authors: 
@@ -172,6 +182,8 @@
 # DN-Splatter
 # ---------------------------------------------------------------
 - year: "2024"
+  cv-feature: true
+  paper-pub-short: "WACV 2025"
   paper-logo: "https://github.com/maturk/dn-splatter/blob/gh-pages/static/images/overview.png?raw=true"
   paper-title: "DN-Splatter: Depth and Normal Priors for Gaussian Splatting and Meshing"
   paper-authors: 
@@ -212,6 +224,8 @@
 # Deblur
 # ---------------------------------------------------------------
 - year: "2024"
+  cv-feature: true
+  paper-pub-short: "ECCV 2024"
   paper-logo-mp4: "https://github.com/SpectacularAI/3dgs-deblur/blob/gh-pages/static/videos/synthetic_motion_blur_example.mp4?raw=true"
   paper-title: "Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion"
   paper-authors: 
@@ -263,6 +277,8 @@
 # gsplat
 # ---------------------------------------------------------------
 - year: "2024"
+  cv-feature: true
+  paper-pub-short: "JMLR 2025"
   paper-logo: "./assets/gsplat.jpg"
   paper-title: "gsplat: An Open-Source Library for Gaussian Splatting"
   paper-authors: 

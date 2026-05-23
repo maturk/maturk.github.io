@@ -29,3 +29,13 @@ bundle install
 ```bash
 bundle exec jekyll serve --livereload
 ```
+
+## regenerate cv.pdf
+
+After editing `cv.html`, run:
+
+```bash
+./bin/make-cv.sh
+```
+
+Uses headless Chrome to render `cv.html` with the `.pdf` body class active.
