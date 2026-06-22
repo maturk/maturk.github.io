@@ -163,10 +163,11 @@ I'm a computer vision PhD candidate at Aalto University 🇫🇮, advised by [Ju
 </ul>
 
 ---
-## Invited talks
+## Invited talks & events
 
 Date | Event | Details
 -----|-------|--------
+June, 23rd 2026 | Google PhD Summit | Invited PhD event at the Google Zürich office.
 Dec, 2nd 2024 | FCAI SIG Workshop| FCAI Special Interest Group, AI for Computer Vision workshop. Talk about 3D Vision research. [Link](https://fcai.fi/calendar/2024/12/3/fcai-sig-in-computer-vision-workshop)
 April, 24th 2024 | FMX 2024  | Survey on NeRFs and 3DGS for the Lighting & Rendering track organized by [Christophe Hery](https://www.linkedin.com/in/christophehery/) in Stuttgart, Germany. Thank you all for the great time there!
 May, 6th 2024 | Machine Learning Coffee Seminar | Finnish Center for Artificial Intelligence (FCAI) [talk](https://fcai.fi/calendar/2024/5/6/juho-kannala-tba) on neural rendering.
