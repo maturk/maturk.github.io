@@ -1,6 +1,38 @@
 # Set cv-feature: true to include a paper in cv.pdf; false (or omit) hides it.
 
 # ---------------------------------------------------------------
+# TileGS (PG 2026)
+# ---------------------------------------------------------------
+- year: "2026"
+  cv-feature: true
+  paper-pub-short: "PG 2026"
+  paper-logo: "./assets/tilegs.png"
+  paper-title: "TileGS: Tile-Local Depth Binning for Gaussian Splatting Rasterization"
+  paper-authors:
+    - name: Wei Tan
+      link:
+      institutions: [Aalto University]
+
+    - name: <b>Matias Turkulainen</b>
+      link: https://maturk.github.io
+      institutions: [Aalto University]
+
+    - name: Lauri Ilola
+      link:
+      institutions: [Nokia Technologies]
+
+    - name: Hamed Rezazadegan Tavakoli
+      link:
+      institutions: [Nokia Technologies]
+
+    - name: Juho Kannala
+      link: https://users.aalto.fi/~kannalj1/
+      institutions: [Aalto University, University of Oulu]
+
+  link-arxiv: https://arxiv.org/abs/2609.03613
+  paper-pub: Pacific Graphics (PG), 2026
+
+# ---------------------------------------------------------------
 # Cross-View Splatter (CVPR 2026)
 # ---------------------------------------------------------------
 - year: "2026"
