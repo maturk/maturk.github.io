@@ -11,7 +11,7 @@ permalink: /cv.html
   <style>
     @page {
       size: A4;
-      margin: 12mm 15mm;
+      margin: 10mm 15mm;
     }
 
     * { box-sizing: border-box; }
@@ -32,6 +32,10 @@ permalink: /cv.html
     }
     @media print {
       .page { max-width: none; padding: 0; }
+      body { line-height: 1.32; }
+      .cv-section { margin-bottom: 7px; }
+      .entries > .entry + .entry { margin-top: 4px; }
+      .entries > .pub + .pub { margin-top: 4px; }
     }
 
     a { color: #990003; text-decoration: none; }
