@@ -91,6 +91,11 @@ I'm a computer vision PhD candidate at Aalto University 🇫🇮, advised by [Ju
 				<i class="fa fa-link" aria-hidden="true"></i> ProjectPage </a>  
 			{% endif %}
 
+			{% if paper.link-video %}
+			<a href="{{paper.link-video}}" target="_blank" rel="noopener">
+				<i class="fa fa-youtube-play" aria-hidden="true"></i> Video </a>
+			{% endif %}
+
 			{% if paper.link-supplementary %}
 			<a href="{{paper.link-supplementary}}" target="_blank" rel="noopener">
 				<i class="fa fa-file-pdf-o" aria-hidden="true"></i> Supplementary </a>  
