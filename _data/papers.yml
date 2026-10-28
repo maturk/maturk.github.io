@@ -1,6 +1,59 @@
 # Set cv-feature: true to include a paper in cv.pdf; false (or omit) hides it.
 
 # ---------------------------------------------------------------
+# GroundControl (WACV 2027)
+# ---------------------------------------------------------------
+- year: "2027"
+  cv-feature: true
+  paper-pub-short: "WACV 2027"
+  paper-logo: "https://nianticspatial.github.io/groundcontrol/resources/teaser.jpg"
+  paper-title: "GroundControl: Satellite-Conditioned Multi-View Diffusion for Reconstruction-Free Novel View Synthesis"
+  paper-authors:
+    - name: Akshay Krishnan
+      link: https://akshay-krishnan.github.io
+      institutions: [Niantic Spatial, Georgia Tech]
+
+    - name: <b>Matias Turkulainen</b>
+      link: https://maturk.github.io
+      institutions: [Niantic Spatial, Aalto University]
+
+    - name: Jamie Wynn
+      link: https://scholar.google.com/citations?user=ASP-uu4AAAAJ&hl=en
+      institutions: [Niantic Spatial]
+
+    - name: Zawar Qureshi
+      link: https://scholar.google.cat/citations?user=P2jZC8YAAAAJ&hl=de
+      institutions: [Niantic Spatial]
+
+    - name: Mohamed Sayed
+      link: https://masayed.com
+      institutions: [Niantic Spatial]
+
+    - name: Guillermo Garcia-Hernando
+      link: https://guiggh.github.io
+      institutions: [Niantic Spatial]
+
+    - name: Sara Vicente
+      link: https://scholar.google.com/citations?user=7wWsNNcAAAAJ&hl=en
+      institutions: [Niantic Spatial]
+
+    - name: James Hays
+      link: https://www.cc.gatech.edu/~hays/
+      institutions: [Georgia Tech]
+
+    - name: Michael Firman
+      link: https://michaelfirman.co.uk/
+      institutions: [Niantic Spatial]
+
+    - name: Daniyar Turmukhambetov
+      link: https://dantkz.github.io
+      institutions: [Niantic Spatial]
+
+  link-arxiv: https://arxiv.org/abs/2610.37545
+  link-projectpage: https://nianticspatial.github.io/groundcontrol/
+  paper-pub: Winter Conference on Applications of Computer Vision (WACV), 2027
+
+# ---------------------------------------------------------------
 # TileGS (PG 2026)
 # ---------------------------------------------------------------
 - year: "2026"
